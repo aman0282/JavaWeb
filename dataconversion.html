@@ -1,0 +1,609 @@
+<html lang="en"></html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Data Conversion</h2>
+                    <h2 class="heading">1. How to convert String to int</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		String str="123";
+		int num=Integer.parseInt(str);
+		System.out.println("Converted int:"+num);
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 1.java
+
+D:\javaprogram\data conversion>java A
+Converted int:123
+                    </pre>
+                    <H2 class="heading">2. How to convert int to String</H2>
+                    <PRE>
+class A
+{
+	public static void main(String args[])
+	{
+		int num=123;
+		String str=Integer.toString(num);
+		System.out.println(str);
+	}
+
+
+}
+                    </PRE>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 2.java
+
+D:\javaprogram\data conversion>java A
+123
+                    </pre>
+                    <h2 class="heading">3. How to convert String to long</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		String str="1234567890";
+		long num=Long.parseLong(str);
+		System.out.println("Converted long:"+num);
+	}
+
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 3.java
+
+D:\javaprogram\data conversion>java A
+Converted long:1234567890
+                    </pre>
+                    <h2 class="heading">4. How to convert long to String</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		long num=1234567890;
+		String str=Long.toString(num);
+		System.out.println(str);
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 4.java
+
+D:\javaprogram\data conversion>java A
+1234567890
+
+                    </pre>
+                    <h2 class="heading">5. How to convert String to float</h2>
+                    <pre>
+                        
+class A
+{
+	public static void main(String args[])
+	{
+		String str="123.45";
+		float num=Float.parseFloat(str);
+		System.out.println("Converted float:"+num);	
+	}
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 5.java
+
+D:\javaprogram\data conversion>java A
+Converted float:123.45
+                    </pre>
+                    <h2 class="heading">6. How to convert float to String</h2>
+                    <PRE>
+class A
+{
+	public static void main(String args[])
+	{
+		float num=123.45f;
+		String str=Float.toString(num);
+		System.out.println(str);
+	}
+
+
+}
+                    </PRE>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 6.java
+
+D:\javaprogram\data conversion>java A
+123.45
+
+                    </pre>
+                    <h2 class="heading">7. How to convert String to double</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		String str="12.345";
+		double num=Double.parseDouble(str);
+		System.out.println("Converted double:"+num);
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 7.java
+
+D:\javaprogram\data conversion>java A
+Converted double:12.345
+                    </pre>
+                    <h2 class="heading">8. How to convert double to String</h2>
+                    <PRE>
+                        
+class A
+{
+	public static void main(String args[])
+	{
+		double num=123.45;
+		String str=Double.toString(num);
+		System.out.println(str);
+	}
+
+}
+                    </PRE>
+                    <H2 class="HEADING">Output</H2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 8.java
+
+D:\javaprogram\data conversion>java A
+123.45
+                    </pre>
+                    <h2 class="heading">9. How to convert String to char</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		String str="Aman";
+		char ch[]=str.toCharArray();
+		System.out.println(ch);
+
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                      
+D:\javaprogram\data conversion>javac 11.java
+
+D:\javaprogram\data conversion>java A
+Aman
+  
+                    </pre>
+                    <h2 class="heading">10.How to convert char to String</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		char ch='A';
+		String str=Character.toString(ch);
+		System.out.println(str);
+	}
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 12.java
+
+D:\javaprogram\data conversion>java A
+A
+
+                    </pre>
+                    <h2 class="heading">11.How to convert String to Object</h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        String str="Aman";
+        Object obj=str;
+        System.out.println(obj);
+                                
+    }
+} 
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 13.java
+
+D:\javaprogram\data conversion>java A
+Aman
+                    </pre>
+                    <h2 class="heading">12.How to convert Object to String
+                    </h2>
+                    <pre>
+class A
+{
+        public static void main(String args[])
+        {
+            Object obj="Aman";
+            String str=obj.toString();
+            System.out.println(str);
+        }
+}   
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 14.java
+
+D:\javaprogram\data conversion>java A
+Aman
+                    </pre>
+                    <h2 class="heading">13.How to convert int to long
+                    </h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        int num=123;
+        long longnum1 = Long.valueOf(num);
+        System.out.println(longnum1);
+    }
+} 
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 15.java
+
+D:\javaprogram\data conversion>java A
+123
+                    </pre>
+                    <h2 class="heading">14.How to convert long to int
+                    </h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		long num=123l;
+		int intnum1=(int)num;
+		System.out.println(intnum1);
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 16.java
+
+D:\javaprogram\data conversion>java A
+123
+
+                    </pre>
+                    <h2 class="heading">15.How to convert int to double
+                    </h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        int num=123;
+        double doublenum1=(double)num;
+        System.out.println(doublenum1);
+    }
+}  
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 17.java
+
+D:\javaprogram\data conversion>java A
+123.0
+                    </pre>
+                    <h2 class="heading">16.How to convert double to int
+                    </h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		double num=123.45;
+		int intnum1=(int)num;
+		System.out.println(intnum1);	
+	}
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 18.java
+
+D:\javaprogram\data conversion>java A
+123
+
+                    </pre>
+                    <h2 class="heading">17.How to convert char to int
+                    </h2>
+                    <pre>
+
+class A
+{
+    public static void main(String args[])
+    {
+      char c='A';
+      int num1=c;
+      System.out.println(c);
+    }
+                            
+                        
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 19.java
+
+D:\javaprogram\data conversion>java A
+A
+                    </pre>
+                    <h2 class="heading">18.How to convert int to char
+                    </h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        int num=65;
+        char c1=(char)num;
+        System.out.println(c1);
+    }	
+}  
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 20.java
+
+D:\javaprogram\data conversion>java A
+A
+
+                    </pre>
+                    <h2 class="heading">19.How to convert String to boolean
+                    </h2>
+                    <pre>
+class A
+{
+        public static void main(String args[])
+        {
+            String stringTrue="true";
+            String stringFalse="flase";
+            boolean str=Boolean.parseBoolean(stringTrue);
+            boolean str1=Boolean.parseBoolean(stringFalse);
+            System.out.println(str);	
+            System.out.println(str1);	
+        }
+}
+                                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 21data.java
+
+D:\javaprogram\data conversion>java A
+true
+false
+                    </pre>
+                    <h2 class="heading">20.How to convert boolean to String
+                    </h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		boolean booltrue=true;
+		boolean boolfalse=false;
+		
+		String strTrue=Boolean.toString(booltrue);
+		String strFalse1=Boolean.toString(boolfalse);
+
+		System.out.println(strTrue);
+		System.out.println(strFalse1);
+
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 22data.java
+
+D:\javaprogram\data conversion>java A
+true
+false
+
+                    </pre>
+                    <h2 class="heading">21.How to convert Date to Timestamp
+                    </h2>
+                    <pre>
+import java.util.Date;
+import	java.sql.Timestamp;
+                        
+class A
+{
+    public static void main(String args[])
+    {
+        Date date = new Date();
+        Timestamp timestamp = new Timestamp(date.getTime());
+        System.out.println(timestamp);
+    }
+
+} 
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 23data.java
+
+D:\javaprogram\data conversion>java A
+2024-09-19 19:22:36.528
+                    </pre>
+                    <h2 class="heading">22.How to convert Binary to Decimal</h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        int decimal=Integer.parseInt(binary,2);
+        String binary="1011";
+        System.out.println(decimal);
+    }
+} 
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 25.java
+
+D:\javaprogram\data conversion>java A
+11
+                    </pre>
+                    <h2 class="heading">23.How to convert Decimal to Binary</h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        int decimal =12;
+        String binary=Integer.toBinaryString(decimal);
+        System.out.println(binary);
+    }
+}   
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 26data.java
+
+D:\javaprogram\data conversion>java A
+1100
+                    </pre>
+                    <h2 class="heading">24.How to convert Hex to Decimal</h2>
+                    <pre>
+class B
+{
+    public static void main(String args[])
+    {
+        String hex="1A";
+        int decimal =Integer.parseInt(hex,16);
+        System.out.println(decimal);
+                        
+    }
+}                             
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 27data.java
+
+D:\javaprogram\data conversion>java A
+1100
+                    </pre>
+                    <h2 class="heading">25.How to convert Decimal to Hex</h2>
+                    <pre>
+class A
+{
+   public static void main(String args[])
+   {
+      int decimal=161;
+      String hex=Integer.toHexString(decimal);
+      System.out.println(hex);
+   }
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\data conversion>javac 28data.java
+
+D:\javaprogram\data conversion>java A
+a1
+
+                    </pre>
+                    <h2 class="heading">26.How to convert Octal to Decimal</h2>
+                    <pre>
+class A
+{
+    public static void main(String args[])
+    {
+        String octal="12";
+        int decimal=Integer.parseInt(octal,8);
+        System.out.println(decimal);
+    }
+}
+                            
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 29data.java
+
+D:\javaprogram\data conversion>java A
+10
+                    </pre>
+                    <h2 class="heading">27.How to convert Decimal to Octal</h2>
+                    <pre>
+class  A
+{
+    public static void main(String args[])
+    {
+        int decimal=25;
+        String octal=Integer.toOctalString(decimal);
+        System.out.println(octal);
+    }
+}
+                          
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\data conversion>javac 30data.java
+
+D:\javaprogram\data conversion>java A
+31
+                    </pre>

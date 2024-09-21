@@ -1,0 +1,217 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="2darray.html" >2d-Array</a></li>
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Functions</h2>
+                  <h2 class="heading">1.Write a Java method to find the smallest number among three
+                </h2>
+                <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		int a =10;
+		int b =20;
+		int c =30;	
+	
+		int smallest = findSmallest(a,b,c);
+		System.out.println("Smallest number:"+smallest);
+	}
+	public static int findSmallest(int a,int b ,int c)
+	{
+		if(a&LT;=b && a&LT;=c)
+		{
+			return a;
+		}
+		else if(b&LT=a && b&LT=c)
+		{
+			return b;
+		}
+		else 
+		{
+			return c;
+		}
+	}
+		
+
+}
+                </pre>
+                <h2 class="heading">Output</h2>
+                <pre>
+D:\javaprogram\functions>javac 1.java
+
+D:\javaprogram\functions>java A
+Smallest number:10
+
+                </pre>
+                <H2 class="heading">2.Write a Java method to compute the average of three numbers</H2>
+                <PRE>
+class sum
+{
+	public static void main(String args[])
+	{
+		int a =10;
+		int b =20;
+		int c=30;
+		
+		int average=computeAverage(a,b,c);
+		System.out.println("Average:"+average);
+	}
+	public static int computeAverage(int a ,int b ,int c)
+	{
+		return(a+b+c)/3;
+	}
+}
+                </PRE>
+                <H2 class="heading">Output</H2>
+                <pre>
+D:\javaprogram\functions>javac 2.java
+
+D:\javaprogram\functions>java sum
+Average:20
+
+                </pre>
+                <h2 class="heading">3.java method to count all word in a string
+                </h2>
+                <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		String str="Aman";
+		
+		int wordCount=countWords(str);
+		System.out.println("Word count:"+wordCount);
+	}
+
+		static int countWords(String str)
+		{
+			if(str==null)
+			{
+				return 0;
+			}
+			return str.split("").length;
+		}
+}
+                </pre>
+                <h2 class="heading">Output</h2>
+                <pre>
+                    
+D:\javaprogram\functions>javac f4.java
+
+D:\javaprogram\functions>java A
+Word count:4
+                </pre>
+                <H2 class="heading">4. Write a Java method to print characters between two characters (i.e. A to P).</H2>
+                <PRE>
+class Main
+{
+    public static void main(String st[])
+    {
+        printCharacter('A', 'P');	
+    }
+    static void printCharacter(char start, char end)
+    {
+        for(char i = (char)(start+1); i&lt;end; i++)
+        {
+            System.out.println(i+"" );
+        }
+    }
+}
+                </PRE>
+                <H2 class="heading">Output</H2>
+                <pre>
+                    
+D:\javaprogram\functions>javac f6.java
+
+D:\javaprogram\functions>java Main
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+                </pre>
+                <h2 class="heading">5.Write a Java method to display the current date and time.</h2>
+                <pre>
+class DateAndTime
+{
+    public static void main(String st[])
+    {
+        java.util.Date date = new java.util.Date();
+        System.out.println(date);
+    }
+}
+                </pre>
+                <h2 class="heading">Output</h2>
+                <pre>
+D:\javaprogram\functions>javac f8.java
+
+D:\javaprogram\functions>java DateAndTime
+Thu Sep 19 22:41:18 IST 2024
+                </pre>
+                <h2 class="heading">6. Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.</h2>
+                <pre>
+class CheckVowel
+{
+    public static void main(String st[])
+    {
+        System.out.println(IfVowel("abcd"));
+        System.out.println(IfVowel("aeiou"));
+        System.out.println(IfVowel("AEIOU"));         
+    }  
+        static boolean IfVowel(String str)
+        {
+            for(int i = 0; i &lt str.length(); i++)
+            {
+                char c = str.charAt(i);
+                if((c!='a' && c!= 'e'&& c!='i' && c!= 'o' && c!='u' && c!='A' && c!= 'E'&& c!='I' && c!= 'O' && c!='U'))
+                {
+                  return false;
+                }
+            }
+            return true;
+        }
+}
+                </pre>
+                <h2 class="heading">Output</h2>
+                <pre>
+D:\javaprogram\functions>javac 13f.java
+
+D:\javaprogram\functions>java CheckVowel
+false
+true
+true
+                </pre>

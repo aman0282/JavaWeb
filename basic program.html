@@ -1,0 +1,500 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="2darray.html" >2d-Array</a></li>
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Basic Programs</h2>
+                    <h2 class="heading"> 1.Write a Java program to print ‘Hello World!’ on screen</h2>
+                        <pre>
+class hello
+{
+public static void main(String args[])
+{
+System.out.println("hello world:");
+} 
+}
+                        </pre>
+                        <h2 class="heading">output</h2>
+                        <pre>
+C:\Users\saini>d:
+D:\>cd javaprogram
+D:\javaprogram>javac hello.java
+D:\javaprogram>java hello
+hello world:
+                        </pre>
+                        <h2 class="heading">2.Write a Java program to print the sum of two numbers</h2>
+                        <pre>
+class sum
+{
+    void sum1()
+    {
+        a=10;
+        b=20;
+        int a,b,c;
+        c=a+b;
+        System.out.println(c);
+    }
+    public static void main(String args[])
+    {
+        sum obj=new sum();
+        obj.sum1();
+    }
+}
+                        </pre>
+                        <h2 class="heading">output</h2>
+                        <pre>
+D:\javaprogram>javac sum.java
+D:\javaprogram>java sum
+30   
+                        </pre>
+                        <h2 class="heading">3.Write a Java program that takes two numbers and display the product of two numbers</h2>
+                        <pre>
+class product
+{
+    int a,b,c;
+    void pro()
+    {
+        a=10;
+        b=20;
+        c=a*b;
+        System.out.println(c);
+    }
+    public static void main(String args[])
+    {
+        product obj=new product();
+        obj.pro();
+    }
+}
+                              
+                        </pre>
+                        <h2 class="heading">ouput</h2>
+                        <pre>
+D:\javaprogram>javac product.java
+D:\javaprogram>java product
+200
+                        </pre>
+                        <h2 class="heading">4.Write a Java program to print the sum, multiply, subtract, divide and remainder of two numbers</h2>
+                        <pre>
+class sum
+{
+    int a,b,sum;
+     void sum()
+    {
+        a=10;
+        b=20;
+        sum=a+b;
+        System.out.println(sum);
+    }                             
+    public static void main(String args[])
+    {
+          sum obj=new sum();
+          obj.sum();
+    }
+}                     
+class sub
+{
+    int a,b,sub;
+    
+     void sub()
+    {
+        a=10;
+        b=20;
+        sub=a-b;
+        System.out.println(sub);
+    }
+  public static void main(String args[])
+    {
+          sub obj=new sub();
+          obj.sub();
+    }
+}                         
+class mul
+{
+    int a,b,mul;
+    
+     void mul()
+    {
+        a=10;
+        b=20;
+        mul =a*b;
+        System.out.println(mul);
+    }
+  public static void main(String args[])
+    {
+          mul obj=new mul();
+          obj.mul();
+    }
+}                           
+class div
+{
+    int a,b,div;
+    
+     void div()
+    {
+        a=10;
+        b=5;
+        div =a/b;
+        System.out.println(div);
+    }
+  public static void main(String args[])
+    {
+          div obj=new div();
+          obj.div();
+    }
+}
+ 
+class module
+{
+    int a,b,module;
+    
+     void module()
+    {
+        a=10;
+        b=5;
+        module =a%b;
+        System.out.println(module);
+    }
+  public static void main(String args[])
+    {
+          module obj=new module();
+          obj.module();
+    }
+}     
+                            
+                           
+                        </pre>
+                        <h2 class="heading">output</h2>
+                        <pre>                          
+D:\javaprogram>javac mix.java
+
+D:\javaprogram>java sum
+30
+
+D:\javaprogram>java sub
+-10
+
+D:\javaprogram>java mul
+200
+
+D:\javaprogram>java div
+2
+
+D:\javaprogram>java module
+0
+
+                        </pre>
+                        <h2 class="heading">5.Write a Java program to swap two variables</h2>
+                        <pre>
+class swap
+{
+    public static void main(String args[])
+	{
+		int a=10;
+		int b=20;
+ 		System.out.println("values before swapping:");
+		System.out.println("a= "+a);
+		System.out.println("b= "+b);
+		int temp=a;
+		a=b;
+		b=temp;
+		System.out.println("values after swapping:");
+		System.out.println("a= "+a);
+		System.out.println("b= "+b);
+
+	}
+}
+                        </pre>
+                        <h2 class="heading">output</h2>
+                        <prE>                          
+D:\javaprogram>javac swap.java
+D:\javaprogram>java swap
+values before swapping:
+a= 10
+b= 20
+values after swapping:
+a= 20
+b= 10
+
+                        </prE>
+                            <h2 class="heading">6.Write a Java program to convert a decimal number to binary numbers</h2>
+                            <pre>
+class decimal
+{
+	public static void main(String args[])
+	{
+		int num=25,r,i=0;
+		String b=" ";
+		while(num>0)
+		{
+			r=num%2;
+			b=r+b;
+			num=num/2;
+		}
+	  System.out.println(b);
+	}
+}    
+                        </pre>
+                        <h2 class="heading">output</h2>
+                        <pre>
+D:\javaprogram>javac decimal.java
+
+D:\javaprogram>java decimal
+11001   
+                        </pre>
+                        <h2 class="heading">7.Write a Java program and compute the sum of the digits of an integer</h2>
+                        <pre>
+class digits 
+{
+    public static void main(String[] args)
+ {
+        int number = 12345; 
+        int sum = 0;
+        while (number != 0) 
+    {
+            int digit = number % 10;//get last digit
+            sum += digit; 
+            number = number / 10;//reomve last digit
+            System.out.println("Number: 12345");
+            System.out.println("Sum of digits: " + sum);
+    }
+   
+   }
+}                                                                                
+                        </pre>
+                        <h2 class="heading">output</h2>
+                        <pre>
+                            
+D:\javaprogram>javac compute.java
+
+D:\javaprogram>java digits
+Number: 12345
+Sum of digits: 5
+Number: 12345
+Sum of digits: 9
+Number: 12345
+Sum of digits: 12
+Number: 12345
+Sum of digits: 14
+Number: 12345
+Sum of digits: 15
+                        </pre>
+                        <h2 class="heading">8.Write a Java program to compare two numbers</h2>
+<pre>
+    class compare
+    {
+        public static void main(String args[])
+        {
+            int num1=30;
+            int num2=30;
+                if(num1>num2)
+            {
+              System.out.println(num1 +" is greater than"+num2);
+            }
+            else if(num1&ltnum2)
+            {
+              System.out.println(num1 +" is less than"+num2);
+            }
+            else
+            {
+              System.out.println(num1 +" is equal to"+num2);
+            }
+        }
+    
+    } 
+</pre>
+<h2 class="heading">output</h2>
+         <pre>
+    D:\javaprogram>javac compare.java
+
+    D:\javaprogram>java compare
+    30 is equal to 30
+         </pre>
+<h2 class="heading">9.Write a Java program to print the ascii value of a given character</h2>
+<pre>
+class ascii
+{
+	public static void main(String args[])
+	{
+		char character='A';
+		System.out.println("character:"+character);
+		System.out.println("ASCII VALUE:"+(int) character);
+	}
+}
+</pre>                 
+         <h2 class="heading">output</h2>
+<pre>
+D:\javaprogram>javac ascii.java
+
+D:\javaprogram>java ascii
+character:A
+AsCII VALUE:65
+</pre>
+<h2 class="heading">10.Write a Java program to print the odd numbers from 1 to 20</h2>
+<pre>
+class odd
+{
+     public static void main(String args[])
+    {
+        System.out.println("Odd numbers from 1 to 20:");
+        for(int i=1;i&lt=20;i++)
+        {
+          if(i%2!=0)
+          {
+            System.out.println(i);
+          }
+        }
+    }
+}
+</pre>
+<h2 class="heading">output</h2>
+<pre>
+D:\javaprogram>javac odd.java
+
+D:\javaprogram>java odd
+Odd numbers from 1 to 20:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+</pre>
+<h2 class="heading ">11.Write a Java program to print the even numbers from 1 to 20</h2>
+<pre>
+    class A
+    {
+        public static void main(String args[])
+        {
+            for(int i=1;i&lt=20;i++)
+            {
+                if(i%2==0)
+                {
+                    System.out.println(i);	
+                }
+            }
+        }
+    }
+    
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+    D:\javaprogram\basic>javac 17.java
+
+    D:\javaprogram\basic>java A
+    2
+    4
+    6
+    8
+    10
+    12
+    14
+    16
+    18
+    20
+    
+</pre>
+<h2 class="heading ">18. Write a Java program to convert a string to an integer<h2>
+<pre>
+    class A
+    {
+        public static void main(String args[])
+        {
+            String str="123";
+            int num=Integer.parseInt(str);
+            System.out.println("Converted integer:"+num);
+        }
+    
+    }
+    
+    
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+    D:\javaprogram\basic>javac 18.java
+
+D:\javaprogram\basic>java A
+Converted integer:123
+</pre>
+
+<h2 class="heading ">12. Write a Java program to convert seconds to hour, minute and seconds<h2>
+    <pre>
+        class A
+{
+	public static void main(String args[])
+	{
+		int seconds=3665;
+		int hours=seconds/3600;
+		int minutes=(seconds % 3600)/60;
+		int remainingSeconds=seconds % 60;
+
+		System.out.println("Hours:"+hours);
+		System.out.println("Minutes:"+minutes);
+		System.out.println("Seconds:"+remainingSeconds);
+	}
+}
+    </pre>
+    <h2 class="heading">Output</h2>
+    <pre>
+        D:\javaprogram\basic>javac 19.java
+
+        D:\javaprogram\basic>java A
+        Hours:1
+        Minutes:1
+        Seconds:5
+    </pre>
+
+    <h2 class="heading ">13. Java program to find area of circle<h2>
+        <pre>
+            class Circle
+{
+	int radius=20;
+	public void getarea()
+	{
+	      System.out.println(3.14*radius*radius);
+	}
+}
+class Main
+{
+	public static void main(String args[])
+	{
+	     Circle obj=new Circle();
+	     obj.getarea();
+	}
+
+}
+
+        </pre>
+        <h2 class="heading">Output</h2>
+        <pre>
+            D:\javaprogram\basic>javac 27.java
+
+            D:\javaprogram\basic>java Main
+            1256.0
+        </pre>

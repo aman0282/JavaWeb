@@ -1,0 +1,343 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="2darray.html" >2d-Array</a></li>
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Packages</h2>
+                    <h2 class="heading"> 1. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</h2>
+<pre>
+import java.util.Date;
+
+ class A 
+{
+    public static void main(String[] args) 
+    {
+        Date currentDate = new Date();
+        System.out.println("Current Date: " + currentDate);
+    }
+}
+</pre>
+                        <h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\package>javac package1.java
+
+D:\javaprogram\package>java A
+Current Date: Wed Sep 18 23:13:20 IST 2024
+</pre>
+                        <H2 class="heading">2.Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.</H2>
+<PRE>
+class Main 
+{
+    	public static void main(String[] args) 
+	{
+        java.util.Date currentDate = new java.util.Date();
+        System.out.println("Current Date: " + currentDate);
+    }
+}
+</PRE>
+                        <H2 class="heading">Output</H2>
+<pre>                            
+D:\javaprogram\package>javac package2.java
+
+D:\javaprogram\package>java Main
+Current Date: Wed Sep 18 23:19:36 IST 2024
+</pre>
+                        <h2 class="heading"> 3.Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</h2>
+<pre>                            
+import java.util.Date;
+class A extends Date
+{
+    public static void main(String[] args) 
+        {
+            Date currentDate = new Date();
+            System.out.println("Current Date: " + currentDate);
+        }
+}                               
+</pre>
+                        <h2 class="heading">Output</h2>
+<pre>                  
+D:\javaprogram\package>javac package3.java
+
+D:\javaprogram\package>java A
+Current Date: Wed Sep 18 23:22:57 IST 2024
+</pre>
+                        <h2 class="heading">4.Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.</h2>
+<pre>
+class Main extends java.util.Date
+{
+    public static void main(String[] args) 
+    {
+        java.util.Date currentDate = new java.util.Date();
+        System.out.println("Current Date: " + currentDate);
+    }
+}     
+</pre>
+                        <h2 class="heading">Output</h2>
+<pre>                            
+D:\javaprogram\package>javac package4.java
+
+D:\javaprogram\package>java Main
+Current Date: Wed Sep 18 23:26:16 IST 2024
+</pre>
+                        <h2 class="heading">5. Create a Java program to create a package with multiple default classes.</h2> 
+<pre>
+package mypackage;
+
+class A
+{
+	public void printMessage()
+	{
+		System.out.println("Hello from A:");
+	}
+}
+class B
+{
+	public void printMessage()
+	{
+		System.out.println("Hello from B:");
+	}
+}
+class C
+{
+	public void printMessage()
+	{
+		System.out.println("Hello from C:");
+	}
+}
+class D
+{
+	public void printMessage()
+	{
+		System.out.println("Hello from D:");
+	}
+}
+class Main
+{
+
+	public static void main(String args[])
+	{
+		 A obj = new A();
+		obj.printMessage();
+		
+		 B obj1 = new B();
+		obj1.printMessage();
+	
+		 C obj2 = new C();
+		obj2.printMessage();
+		
+		 D obj3 = new D();
+		obj3.printMessage();
+	}
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\package>javac -d . package5.java
+
+D:\javaprogram\package>java mypackage.Main
+Hello from A:
+Hello from B:
+Hello from C:
+Hello from D:
+</pre>
+
+                    <h2 class="heading">6. Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.</h2> 
+<pre>
+package pack;
+public class classA
+{
+    public void printMessage()
+    {
+        System.out.println("Hello from classA:");
+    }
+}
+                                            
+</pre>
+<pre>
+package pack;
+public class classB
+{
+    public void printMessage()
+    {
+        System.out.println("Hello from classB:");
+    }
+}                                                                                  
+</pre>
+<pre>
+package pack;
+public class classC
+{
+    public void printMessage()
+    {
+        System.out.println("Hello from classC:");
+    }
+}                                            
+</pre>
+<pre>
+package pack;
+public class classD
+{
+    public void printMessage()
+    {
+        System.out.println("Hello from classD:");
+    }
+}                                                                            
+</pre>
+<pre>
+import pack.classA;
+import pack.classB;
+import pack.classC;
+import pack.classD;
+
+public class MainPack
+    {
+        public static void main(String st[])
+        {
+        new classA().printMessage();
+        new classB().printMessage();
+        new classC().printMessage();
+        new classD().printMessage();
+        }
+    }  
+</pre>
+                                                        <h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\package>javac -d . package5.java
+
+D:\javaprogram\package>java mypackage.Main
+Hello from A:
+Hello from B:
+Hello from C:
+Hello from D:
+</pre>
+           <h2 class="heading">7.Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.</h2>
+<pre>
+package c4.sample;
+
+public class nine
+{
+	protected String protectedMessage="Hello from protected member";
+	public String publicMessage="Hello from public member";
+
+	protected void protectedMethod()
+	{
+		System.out.println("Hello its protected");
+	}
+	public void publicMethod()
+	{
+		System.out.println("Hello its public");
+	}
+
+}
+class B extends nine
+{
+	public static void main(String args[])
+	{
+		B obj = new B();
+		obj.protectedMethod();
+		System.out.println(obj.protectedMessage);
+
+		obj.publicMethod();
+		System.out.println(obj.publicMessage);
+		
+	}
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\package>javac -d . nine.java
+
+D:\javaprogram\package>java c4.sample.B
+Hello its protected
+Hello from protected member
+Hello its public
+Hello from public member
+</pre>
+                                            <H2 class="heading">8.Create a Java program to create a package with public class and public members to be accessed in another class.</H2>
+<pre>                                        
+package mypack2;
+
+public class tenth
+{
+	public String publicMessage="Hello its public member";
+	public void publicMethod()
+	{
+		System.out.println("Hello from public method");
+	}
+}
+class Main
+{
+	public static void main(String args[])
+	{
+		tenth obj = new tenth();
+		obj.publicMethod();
+		System.out.println(obj.publicMessage);
+	}
+}
+</pre>
+                                    <H2 class="heading">Output</H2>
+<pre>
+D:\javaprogram\package>javac -d . tenth.java
+
+D:\javaprogram\package>java mypack2.Main
+Hello from public method
+Hello its public member
+</pre>
+                                    <h2 class="heading">9.Create a Java program to create a package with public class and protected members to be accessed in another class.
+                                    </h2>
+<pre>
+package pack1;
+
+public class eigth
+{
+	protected String protectedVariable="Protected variable";
+	protected void protectedMethod()
+	{
+		System.out.println("Protected method");
+	}
+	
+}
+class B extends eigth
+{
+	public static void main(String args[])
+	{
+		B obj = new B();
+		obj.protectedMethod();
+		System.out.println(obj.protectedVariable);
+	}
+}
+</pre>
+ <h2 class="heading" >Output</h2>
+ <pre>
+D:\javaprogram\package>javac -d . eigth.java
+
+D:\javaprogram\package>java pack1.B
+Protected method
+Protected variable
+ </pre>                        
+
+</div>
+</div>
+</div>
+</body>
+</html>

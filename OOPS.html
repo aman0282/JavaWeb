@@ -1,0 +1,383 @@
+<html lang="en"></html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+				<ul>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="interfaces.html">Interfaces</a></li>
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Object-Oriented Programming</h2>
+                    <h2 class="heading">1. Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.</h2>
+                    <pre>
+class Person
+{
+	int age;
+	String name;
+ 	
+	Person(String n,int a)
+	{
+		name= n;
+		age= a;	
+	}
+	public String getname()
+	{
+		return name;	
+	}
+	public int getage()
+	{
+		return age;	
+	}
+	public static void main(String args[])
+	{
+			Person obj = new Person("Aman",20);
+			obj.getname();
+			obj.getage();
+		
+			Person obj1 = new Person("Abhi",20);
+			obj1.getname();
+			obj1.getage();
+			System.out.println("Person 1  :"+obj.getname()+ " "+obj.getage()+ " years old");
+        		System.out.println("Person 2:" +obj1.getname()+ " " +obj1.getage() + " years old");
+    	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\oops>javac Person.java
+
+D:\javaprogram\oops>java Person
+Person 1  :Aman 20 years old
+Person 2:Abhi 20 years old
+                    </pre>
+                    <h2 class="heading">2. Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated value</h2>
+                    <pre>
+class Dog
+{
+	String n;
+	String b;
+
+	Dog(String name,String breed)
+	{
+		n=name;
+		b=breed;
+		System.out.println("Name : "+n);
+		System.out.println("breed : "+b);
+	}
+	void setName(String name)
+	{
+		n=name;
+	}
+
+	String getName()
+	{
+		return n;
+	}
+	void setBreed(String breed)
+	{
+		b=breed;
+	}
+	String getBreed()
+	{
+		return b;
+	}
+	
+	public static void main(String args[])
+	{
+		Dog obj = new Dog("Max","Golden Retriever");
+		
+		obj.setName("Rocky");
+		System.out.println("updated name is : "+obj.getName());
+		obj.setBreed("Poodle");
+		System.out.println("updated breed is : "+obj.getBreed());
+
+	}
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\oops>javac oop2.java
+
+D:\javaprogram\oops>java Dog
+Name : Max
+breed : Golden Retriever
+updated name is : Rocky
+updated breed is : Poodle
+                    </pre>
+                    <h2 class="heading">3. Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.</h2>
+                    <pre>
+class Rectangle
+{
+	int height;
+	int width;	
+
+	public Rectangle(int h ,int w)
+	{
+		height =h;
+		width=w;
+	}
+	public int calculateArea()
+	{
+		return width*height;
+	}
+	public int calculatePerimeter()
+	{
+		return 2*(width+height);
+	}
+	public static void main(String args[])
+	{
+		Rectangle obj = new Rectangle(5,3);
+		System.out.println("Area is :"+ obj.calculateArea());
+		System.out.println("Perimeter is :"+ obj.calculatePerimeter());
+
+	}
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\oops>javac Rectangle.java
+
+D:\javaprogram\oops>java Rectangle
+Area is :15
+Perimeter is :16
+
+                    </prE>
+                    <h2 class="heading">4. Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.</h2>
+                    <pre>
+class Circle
+{
+	double radius;
+
+	public Circle(double r)
+	{
+		radius=r;
+	}
+	public double calculateArea()
+	{
+		return 3.14*radius*radius;
+	}
+	public static void main(String args[])
+	{
+		Circle obj = new Circle(10);
+		System.out.println("Area of circle is :"+ obj.calculateArea());
+	}
+
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\oops>javac circle.java
+
+D:\javaprogram\oops>java Circle
+Area of circle is :314.0
+                    </pre>
+                    <h2 class="heading">5. Write a Java program to create a class called "Shape" with abstract methods for calculating area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".</h2>
+                    <pre>
+abstract class Shape
+{
+	 abstract double calculatingArea();
+	 abstract double calculatingPerimeter();
+}
+class Rectangle extends Shape
+{
+	double width;
+	double height;
+	public Rectangle(int w , int h)
+	{
+		width=w;
+		height=h;
+	}
+	public double calculatingArea()
+	{
+		return width*height;
+	}
+	public double calculatingPerimeter()
+	{
+		return 2*(width+height);
+	}
+}
+class Circle extends Shape
+{
+	double radius;
+
+	public Circle(double r)
+	{
+		radius=r;
+	}
+	public double calculatingArea()
+	{
+		return 3.14*radius*radius;
+	}
+	public double calculatingPerimeter()
+	{
+		return 2*3.14*radius;
+	}
+}
+class Triangle extends Shape
+{
+	double base;
+	double height;
+	double side;
+	
+	public Triangle(int b ,int h,int s)
+	{	
+		base=b;
+		height=h;
+		side=s;
+	}
+	public double calculatingArea()
+	{
+		return height*base/2;	
+	}
+	public double calculatingPerimeter()
+	{	
+		return side+base+side;
+	}
+}
+class Main
+{
+	public static void main(String args[])
+	{
+		Rectangle obj = new Rectangle(5,3);		
+		System.out.println("Area of rectangle :"+ obj.calculatingArea());
+		System.out.println("Perimeter of rectangle :"+ obj.calculatingPerimeter());
+	
+		Circle obj1 = new Circle(10);		
+		System.out.println("Area of Circle :"+ obj1.calculatingArea());
+		System.out.println("Perimeter of Circle :"+ obj1.calculatingPerimeter());
+	
+		Triangle obj2 = new Triangle(20,12,12);		
+		System.out.println("Area of Traingle :"+ obj2.calculatingArea());
+		System.out.println("Perimeter of Traingle :"+ obj2.calculatingPerimeter());
+	}
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\oops>javac shape.java
+
+D:\javaprogram\oops>java Main
+Area of rectangle :15.0
+Perimeter of rectangle :16.0
+Area of Circle :314.0
+Perimeter of Circle :62.800000000000004
+Area of Traingle :120.0
+Perimeter of Traingle :44.0
+                    </pre>
+                    <h2 class="heading">6.Create a class showing an example of default constructor.</h2>
+                    <pre>
+class A
+{
+   String name;
+   A()
+   {
+        name="Aman";
+   }
+   public static void main(String st[])
+   {
+      A obj=new A();
+      System.out.println("Name:" + obj.name);
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\oops>javac default.java
+
+D:\javaprogram\oops>java A
+Name:Aman
+
+                    </pre>
+                    <H2 class="heading">7.Create a class showing an example of parameterized constructor.</H2>
+                    <PRE>
+class A
+{
+	int x=40;
+	A(){}
+	A(int y)
+	{
+ 		x=y;
+	}
+	void display()
+	{
+		System.out.println(x);
+	}
+	public static void main(String st[])
+	{
+		A obj=new A(12);
+		A obj1=new A();
+		obj.display();
+		obj1.display();
+	}
+}
+                    </PRE>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+D:\javaprogram\oops>javac parameterized.java
+
+D:\javaprogram\oops>java A
+12
+40
+                    </pre>
+                    <H2 class="heading">8. Create a class showing an example of copy constructor.</H2>
+                    <PRE>
+class A
+{
+    int x;
+    A(int y)
+    {
+        x=y;
+    }
+    A(A t)
+    {
+        x=t.x;
+    }
+    void display()
+    {
+        System.out.println(x);
+    }
+    public static void main(String st[])
+    {
+        A obj= new A(10);
+        obj.display();
+        obj.x++;
+        A obj1=new A(obj);
+        obj1.display();
+    }
+} 
+                    </PRE>
+                    <H2 class="heading">Output</H2>
+                    <pre>
+                        
+D:\javaprogram\oops>javac COPY.java
+
+D:\javaprogram\oops>java A
+10
+11
+
+                    </pre>

@@ -1,0 +1,364 @@
+<html lang="en"></html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Input-Output</h2>
+                    <h2 class="heading">1. Enter the character from user using InputStreamReader</h2>
+                    <pre>
+
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+class C
+{
+   	public static void main(String st[]) throws IOException
+	{
+        		InputStreamReader obj = new InputStreamReader(System.in);
+			System.out.println("Enter a character: ");
+        		int str = obj.read();
+   	     		System.out.println("Entered Character: " + (char)str);
+	}
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                   
+D:\javaprogram\input-output>javac input1.java
+
+D:\javaprogram\input-output>java C
+Enter a character:
+A
+Entered Character: A     
+                    </pre>
+                    <h2 class="heading">2. Enter the string from user using BufferedStreamReader</h2>
+                    <pre>
+import java.io.BufferedReader;
+class C
+{
+    public static void main(String st[])  
+    {
+        BufferedReader obj= new BufferedReader(new java.io.InputStreamReader(System.in));
+		try
+		{
+		    System.out.println("Enter a String:");
+            String str = obj.readLine();
+            System.out.println("Your String : " + str);
+		}
+		catch(java.io.IOException e)
+		{
+			System.out.println(e.getMessage());
+		}
+    }
+
+}
+                    </pre>
+                    <pre>
+                        
+D:\javaprogram\input-output>javac input2.java
+
+D:\javaprogram\input-output>java C
+Enter a String:
+AMAN
+Your String : AMAN
+                    </pre>
+                    <h2 class="heading">3. Enter the integer from user using Scanner class</h2>
+                    <pre>
+import java.util.Scanner;
+import java.util.Scanner;
+
+class Integer
+{
+	public static void main(String args[])
+	{
+		Scanner str =new Scanner(System.in);
+		try
+		{
+			System.out.println("Enter Integer:");    			
+			System.out.println("Entered Integer: "+str.nextInt());
+		}
+		catch( java.util.InputMismatchException e)
+		{
+			System.out.println(e.getMessage());
+
+		}
+	}
+}
+              </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        
+D:\javaprogram\input-output>javac input3.java
+
+D:\javaprogram\input-output>java Integer
+Enter Integer:
+1
+Entered Integer: 1
+                    </pre>
+                    <h2 class="heading">4. Enter the float from user using Scanner class</h2>
+                    <pre>
+import java.util.Scanner;
+import java.util.Scanner;
+
+class A
+{
+	public static void main(String args[])
+	{
+		Scanner str =new Scanner(System.in);
+		try
+		{
+				System.out.println("Enter Float:");    
+				System.out.println("Entered Float: "+str.nextFloat());
+		} 
+		catch( java.util.InputMismatchException e)
+		{
+				System.out.println(e.getMessage());
+		}
+	}
+}
+                    </pre>
+<h2 class="heading">Output</h2>
+<PRE>
+    
+D:\javaprogram\input-output>javac input4.java
+
+D:\javaprogram\input-output>java A
+Enter Float:
+12.34
+Entered Float: 12.34
+</PRE>
+<H2 class="heading">5. Enter the double from user using Scanner class</H2>
+<pre>
+import java.util.Scanner;
+import java.util.Scanner;
+
+class A
+{
+	public static void main(String args[])
+	{
+		Scanner str =new Scanner(System.in);
+		try
+		{
+				System.out.println("Enter Double Value:");    
+				System.out.println("Entered Double Value: "+str.nextDouble());
+		} 
+		catch( java.util.InputMismatchException e)
+		{
+				System.out.println(e.getMessage());
+		}
+	}
+}
+</pre>
+<h2 class="heading">Ouput</h2>
+<pre>
+D:\javaprogram\input-output>javac input5.java
+
+D:\javaprogram\input-output>java A
+Enter Double Value:
+233.34
+Entered Double Value: 233.34
+</pre>
+<h2 class="heading">6. Enter the boolean from user using Scanner class</h2>
+<pre>
+import java.util.Scanner;
+import java.util.Scanner;
+
+class A
+{
+	public static void main(String args[])
+	{
+		Scanner str =new Scanner(System.in);
+		try
+		{
+				System.out.println("Enter a Boolean:");    
+				System.out.println("Entered Boolean Value: "+str.nextBoolean());
+		} 
+		catch( java.util.InputMismatchException e)
+		{
+				System.out.println(e.getMessage());
+		}
+	}
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+    
+D:\javaprogram\input-output>javac input6.java
+
+D:\javaprogram\input-output>java A
+Enter a Boolean:
+trye
+null
+
+D:\javaprogram\input-output>javac input6.java
+
+D:\javaprogram\input-output>java A
+Enter a Boolean:
+true
+Entered Boolean Value: true
+</pre>
+<h2 class="heading">7. Enter the short integer from user using Scanner class"</h2>
+<pre>
+import java.util.Scanner;
+
+class Short
+{
+    public static void main(String args[])
+    {
+        Scanner str = new Scanner(System.in);
+        try
+        {
+            System.out.println("Enter Value:");
+            short obj=str.nextShort();
+            System.out.println("Entered Value is:"+obj);
+        }
+        catch( java.util.InputMismatchException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\input-output>javac input7.java
+
+D:\javaprogram\input-output>java Short
+Enter Value:
+12
+Entered Value is:12
+</pre>
+<h2 class="heading">8. Enter the long integer from user using Scanner class</h2>
+<pre>
+import java.util.Scanner;
+
+class A
+{
+    public static void main(String args[])
+    {
+        Scanner str = new Scanner(System.in);
+        try
+        {
+            System.out.println("Enter Value:");
+            long obj=str.nextLong();
+            System.out.println("Entered Value is:"+obj);
+        }
+        catch( java.util.InputMismatchException e)
+        {
+            System.out.println(e.getMessage());
+        }		
+    }
+}
+</pre>
+<h2 class="heading">Ouput</h2>
+<pre>
+D:\javaprogram\input-output>javac input8.java
+    
+D:\javaprogram\input-output>java A
+Enter Value:
+1234
+Entered Value is:1234
+</pre>
+<h2 class="heading">9. Get all characters from the file and display on the screen</h2>
+<pre>
+import java.util.Scanner;
+import java.io.BufferedReader;
+    
+class str
+{
+    public static void main(String st[])
+    {
+        try
+        {
+            java.io.FileReader file = new java.io.FileReader("file.txt");
+            BufferedReader obj=new BufferedReader(file);
+            
+            System.out.println(obj.readLine());
+        }
+        catch(java.io.FileNotFoundException e)
+        {
+            System.out.println("File not exist");
+        }
+        catch(java.io.IOException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\input-output>javac input9.java
+
+D:\javaprogram\input-output>java str
+Aman
+</pre>
+<h2 class="heading">10. Get all characters from the file, count number of lines, words, characters and display on the screen</h2>
+<pre>
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
+class str
+{
+    public static void main(String st[])
+    {
+        try
+        {
+            File file2= new File("file.txt");
+            Scanner obj=new Scanner(file2);  
+            int lines = 0;
+            int words = 0;
+            int characters = 0;
+            while (obj.hasNextLine()) 
+            {
+                String line = obj.nextLine();
+                lines++;
+                words += line.split("\\s+").length;
+                characters += line.length() + 1;//for new line
+                System.out.println(line);
+            }
+            System.out.println("Lines: " + lines);
+            System.out.println("Words: " + words);
+            System.out.println("Characters: " + characters);
+        }
+        catch(java.io.IOException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+D:\javaprogram\input-output>javac input10.java
+
+D:\javaprogram\input-output>java str
+Aman
+Lines: 1
+Words: 1
+Characters: 5 
+</pre>
