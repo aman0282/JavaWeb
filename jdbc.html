@@ -1,0 +1,364 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Java Database Connectivity</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="nav-bar"></div> 
+
+
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="2darray.html" >2d-Array</a></li>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="jdbc.html">Java Database Connectivity</a></li>     
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="Arrays">
+                    <h2 class="heading t-head">Java Database Connectivity</h2>
+                    <h2 class="heading">1. Create the connection with MySQL Database and manage the driver.</h2>
+                    <pre>
+import java.sql.*;
+
+class jdbc
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		int r=-1;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        Conection successful
+                    </pre>
+                    <h2 class="heading">2. Create the table in the database from Java API.
+                    </h2>
+                    <pre>
+                        import java.sql.*;
+
+class jdbc2
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		 int r=-1;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+        	java.sql.Statement st = c1.createStatement();
+        	try
+        	{
+           		r =st.executeUpdate("Create table student(Roll_no int(5),Name varchar(30),Marks int(5))");
+        	}
+        	catch(java.sql.SQLSyntaxErrorException e)
+        	{
+            		System.out.println("Table exists!");
+        	}
+		//System.out.println(r);
+        	if (r==0)
+		{
+           		System.out.println("Table created!");
+        	}
+        	else
+        	{
+            		System.out.println("Table not created!");
+        	}
+    }
+}
+	
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Conection successful
+Table created!
+                    </pre>
+                    <h2 class="heading">3.Insert the row in the table in the database from Java API.
+                    </h2>
+                    <pre>
+                        import java.sql.*;
+
+class jdbc3
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		 int r=-1;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+		java.sql.Statement st = c1.createStatement();
+        	try
+        	{
+            		r =st.executeUpdate("insert into student values(3,'Abhishek',96)");
+        	}
+        	catch(java.sql.SQLSyntaxErrorException e)
+        	{
+           		 System.out.println(e.getMessage());
+        	}
+        	if (r!=0) 
+		{
+            		System.out.println("Row inserted!");
+        	}
+        	else
+        	{
+            		System.out.println("Row not inserted!");
+        	}
+    	}
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Conection successful
+Row inserted!
+                    </pre>
+                    <h2 class="heading">Update the row in the table in the database from Java API
+                    </h2>
+                    <pre>
+                        import java.sql.*;
+
+class jdbc       
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		 int r=0;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+		java.sql.Statement st = c1.createStatement();
+        	try
+        	{
+            		r =st.executeUpdate("Update student set Name = 'Manjit Kumar' where Roll_no = 1");
+        	}
+        	catch(java.sql.SQLSyntaxErrorException e)
+        	{
+           	 	System.out.println(e.getMessage());
+        	}
+       		if (r!=0) 
+		{
+            		System.out.println("Row Updated!");
+        	}
+        	else
+        	{
+            		System.out.println("Row not Updated!");
+        	}
+	}
+}
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        Conection successful
+                    </pre>
+                    <h2 class="heading">5.Delete the row in the table in the database from Java API.
+
+                    </h2>
+                    <pre>
+                        import java.sql.*;
+
+class jdbc5
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		 int r=-1;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+		java.sql.Statement st = c1.createStatement();
+        	try
+        	{
+            		r =st.executeUpdate("delete from student where Roll_no = 1");
+        	}
+        	catch(java.sql.SQLSyntaxErrorException e)
+        	{
+            		System.out.println(e.getMessage());
+        	}
+        	if (r!=0) 
+		{
+            		System.out.println("Row Deleted!");
+        	}
+        	else
+        	{
+            		System.out.println("Row not Deleted!");
+        	}
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Conection successful
+Row Deleted!
+                    </pre>
+                    <h2 class="heading">6.Select multiple rows from the database table in Java API and show the result on the screen.</h2>
+                    <pre>
+                        import java.sql.*;
+
+class jdbc6
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		java.sql.ResultSet res=null;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+		java.sql.Statement st = c1.createStatement();
+       		try
+        	{
+            		res =st.executeQuery("select * from student ");
+        	}
+        	catch(java.sql.SQLSyntaxErrorException e)
+        	{
+            		System.out.println(e.getMessage());
+        	}
+            	//System.out.println("Rows "+res.next());
+            	int i=0;
+            	while (res.next()) 
+		{
+                	//System.out.println("Rows "+res.next());
+                	int Roll_no = res.getInt("Roll_no");
+                	String Name = res.getString("Name");
+                	int marks = res.getInt("Marks");
+                	System.out.println("Roll No : "+Roll_no);
+                	System.out.println("Name : "+Name);
+                	System.out.println("Marks : "+marks);
+            	}
+        }
+
+    }
+
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Connection successful
+Roll No : 3
+Name : Abhishek Dhawan
+Marks : 96
+
+                    </pre>
+                    <h2 class="heading">7.Create a Scrollable Readonly Resultset and ask the row number from the user and display that row on the screen.
+
+                    </h2>
+                    <pre>
+                        import java.sql.*;
+
+class jdbc7
+{
+	public static void main(String[] args) throws java.lang.ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		java.sql.ResultSet res=null;
+		int rowNum =0;
+		Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "root");
+		if(c1!=null)
+		{
+			System.out.println("Connection successful");
+		}
+		else
+		{
+			System.out.println("Not connected");
+		}
+		 java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+        System.out.println("Enter Row Number: ");
+        try
+        {
+            rowNum = Integer.parseInt(input.readLine());
+        }
+        catch(java.io.IOException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        catch(NumberFormatException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        java.sql.Statement st = c1.createStatement(java.sql.ResultSet.CONCUR_READ_ONLY,java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE);
+        try
+        {
+            res =st.executeQuery("select * from student ");
+        }
+        catch(java.sql.SQLSyntaxErrorException e)
+        {
+            System.out.println(e.getMessage());
+        }
+           
+            int i=1;
+            while (res.next()) {
+                if (i==rowNum) {
+                    int Roll_no = res.getInt("Roll_no");
+                    String Name = res.getString("Name");
+                    int marks = res.getInt("Marks");
+                    System.out.println("Roll No : "+Roll_no);
+                    System.out.println("Name : "+Name);
+                    System.out.println("Marks : "+marks);
+                }
+               i++;
+            }
+        }
+
+    }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Connection successful
+Enter Row Number:
+1
+Roll No : 3
+Name : Abhishek Dhawan
+Marks : 96
+                    </pre>
