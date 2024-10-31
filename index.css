@@ -25,7 +25,8 @@
 
 #leftcontainer {
     background-color: navy;
-    width: fit-content;
+   
+    height: 2000px;
     padding: 10px;
     position: sticky;
     left: 0;
@@ -38,6 +39,8 @@
 }
 
 #leftcontainer ul {
+    height: 500px;
+    
     transform: translateY(50%);
     color: white;
 }
@@ -47,7 +50,7 @@
     cursor: pointer;
     padding: 10px;
     transition: margin-left 0.5s, background-color 0.5s;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
 }
 
@@ -73,7 +76,6 @@ pre {
 }
 a {   
     text-indent: 50px;
-    font-size: x-large;
     color: white;
     text-decoration: none;
 }
