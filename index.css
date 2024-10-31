@@ -25,7 +25,7 @@
 
 #leftcontainer {
     background-color: navy;
-   
+    overflow-y: scroll;
     height: 2000px;
     padding: 10px;
     position: sticky;
