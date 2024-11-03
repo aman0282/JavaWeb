@@ -77,9 +77,9 @@ Copy Array
                                 int[] array = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
                                 int[] frequency = new int[array.length];
                         
-                                for (int i = 0; i < array.length; i++) {
+                                for (int i = 0; i &lt; array.length; i++) {
                                     int count = 0;
-                                    for (int j = 0; j < array.length; j++) {
+                                    for (int j = 0; j &lt; array.length; j++) {
                                         if (array[i] == array[j]) {
                                             count++;
                                         }
@@ -87,9 +87,9 @@ Copy Array
                                     frequency[i] = count;
                                 }
                         
-                                for (int i = 0; i < array.length; i++) {
+                                for (int i = 0; i &lt; array.length; i++) {
                                     boolean isDuplicate = false;
-                                    for (int j = 0; j < i; j++) {
+                                    for (int j = 0; j &lt; i; j++) {
                                         if (array[i] == array[j]) {
                                             isDuplicate = true;
                                             break;
@@ -124,9 +124,9 @@ Number 4 appears 4 times
                                 System.out.println();
                         
                                 // Left rotate
-                                for (int i = 0; i < rotations; i++) {
+                                for (int i = 0; i &lt; rotations; i++) {
                                     int temp = array[0];
-                                    for (int j = 0; j < array.length - 1; j++) {
+                                    for (int j = 0; j &lt; array.length - 1; j++) {
                                         array[j] = array[j + 1];
                                     }
                                     array[array.length - 1] = temp;
@@ -155,9 +155,9 @@ Rotated array:
                                 int[] array = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
                         
                                 System.out.println("Duplicate elements:");
-                                for (int i = 0; i < array.length; i++) {
+                                for (int i = 0; i &lt; array.length; i++) {
                                     int count = 0;
-                                    for (int j = 0; j < array.length; j++) {
+                                    for (int j = 0; j &lt;array.length; j++) {
                                         if (array[i] == array[j]) {
                                             count++;
                                         }
@@ -188,7 +188,7 @@ Duplicate elements:
 	public static void main(String st[])
 	{
 	int arr[]={1,2,3,4},i;
-	for(i=0;i<arr.length;i++)
+	for(i=0;i&lt;arr.length;i++)
 	{
 	System.out.println(arr[i]);
 	}
@@ -231,7 +231,7 @@ Duplicate elements:
 		public static void main(String st[])
 		{
 		int arr[]={1,2,3,4},i;
-		for(i=0;i<arr.length;i++)
+		for(i=0;i&lt;arr.length;i++)
 		{
 		if(i%2==0)
 		{
@@ -254,7 +254,7 @@ Duplicate elements:
                 public static void main(String st[])
                 {
                 int arr[]={1,2,3,4},i;
-                for(i=0;i<arr.length;i++)
+                for(i=0;i&lt;arr.length;i++)
                 {
                 if(i%2!=0)
                 {
@@ -277,7 +277,7 @@ Duplicate elements:
                         {
                         int arr[]={1,20,30,4,5},i,temp,max=0;
                         temp=arr[0];
-                        for(i=0;i<arr.length;i++)
+                        for(i=0;i&lt;arr.length;i++)
                         {
                         if(arr[i]>temp)
                         {
@@ -306,9 +306,9 @@ Duplicate elements:
         {
         int arr[]={1,20,30,4,5},i,temp,min=0;
         temp=arr[0];
-        for(i=0;i<arr.length;i++)
+        for(i=0;i&lt;arr.length;i++)
         {
-        if(arr[i]<temp)
+        if(arr[i]&lt;temp)
         {
         temp=arr[i];
         min=temp;
@@ -352,7 +352,7 @@ Duplicate elements:
 	public static void main(String st[])
 	{
 	int arr[]={1,2,3,4},sum=0,i;
-	for(i=0;i<arr.length;i++)
+	for(i=0;i&lt;arr.length;i++)
 	{
 	sum+=arr[i];
 	}
@@ -378,7 +378,7 @@ Duplicate elements:
                                 int[] temp = new int[d];
                         
                                 // Store the last d elements in the temporary array
-                                for (int i = 0; i < d; i++) {
+                                for (int i = 0; i &lt; d; i++) {
                                     temp[i] = arr[n - d + i];
                                 }
                         
@@ -388,7 +388,7 @@ Duplicate elements:
                                 }
                         
                                 // Copy the temporary array back to the original array
-                                for (int i = 0; i < d; i++) {
+                                for (int i = 0; i &lt; d; i++) {
                                     arr[i] = temp[i];
                                 }
                             }
@@ -435,9 +435,9 @@ Array after right rotation by 2 positions:
 	public static void main(String st[])
 	{
 	int arr[]={4,3,5,1,6},i,j,temp;
-	for(i=0;i<arr.length;i++)
+	for(i=0;i&lt;arr.length;i++)
 	{
-	for(j=i+1;j<arr.length;j++)
+	for(j=i+1;j&lt;arr.length;j++)
 	{
 	if(arr[j]>arr[i])
 	{
@@ -447,7 +447,7 @@ Array after right rotation by 2 positions:
 	}
 	}
 	}
-	for(i=0;i<arr.length;i++)
+	for(i=0;i&lt;arr.length;i++)
 	{
 	System.out.println(arr[i]);
 	}
@@ -469,11 +469,11 @@ Array after right rotation by 2 positions:
 	public static void main(String st[])
 	{
 	int arr[]={4,3,5,1,6},i,j,temp;
-	for(i=0;i<arr.length;i++)
+	for(i=0;i&lt;arr.length;i++)
 	{
-	for(j=i+1;j<arr.length;j++)
+	for(j=i+1;j&lt;arr.length;j++)
 	{
-	if(arr[j]<arr[i])
+	if(arr[j]&Lt;arr[i])
 	{
 	temp=arr[i];
 	arr[i]=arr[j];
@@ -481,7 +481,7 @@ Array after right rotation by 2 positions:
 	}
 	}
 	}
-	for(i=0;i<arr.length;i++)
+	for(i=0;i&lt;arr.length;i++)
 	{
 	System.out.println(arr[i]);
 	}
@@ -498,5 +498,365 @@ Array after right rotation by 2 positions:
                     </pre>
                     <h2 class="heading">16. Program to Find 3rd Largest Number in an array</h2>
                     <pre>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt;arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static void sortArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    for(int j = 0; j &lt; (arr.length-i-1); j++){
+                                        if(arr[j] &lt; arr[j+1]){
+                                            int temp = arr[j];
+                                            arr[j] = arr[j+1];
+                                            arr[j+1] = temp;
+                                        }
+                                    }
+                                }
+                            }
                         
+                            static void thirdLargestArrayValue(int arr[]){
+                                sortArray(arr);
+                                int count = 0;
+                        
+                                for(int i = 1; i &lt;arr.length; i++){
+                                    while(i &lt; arr.length && arr[i-1] == arr[i]){
+                                        i++;
+                                    }
+                                    count++;
+                                    if(count == 2 && i &lt;arr.length){
+                                        System.out.println("Third Largest Value of Array : " + arr[i]);
+                                        return;
+                                    }
+                                }
+                                System.out.println("Third Largest Value of Array does not exist");
+                            }		
+                            public static void main(String[] args){
+                                int arr[] = {9, 3, 91, 25, 87};
+                                printArray(arr);
+                                thirdLargestArrayValue(arr);
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Value at 1 position : 9
+Value at 2 position : 3
+Value at 3 position : 91
+Value at 4 position : 25
+Value at 5 position : 87
+Third Largest Value of Array : 25
+                    </pre>
+                    <h2 class="heading">17. Program to Find 2nd Largest Number in an array</h2>
+                    <prE>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static void sortArray(int arr[]){
+                                for(int i = 0; i &Lt; arr.length; i++){
+                                    for(int j = 0; j &lt; (arr.length-i-1); j++){
+                                        if(arr[j] &Lt; arr[j+1]){
+                                            int temp = arr[j];
+                                            arr[j] = arr[j+1];
+                                            arr[j+1] = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        
+                            static void secondLargestArrayValue(int arr[]){
+                                sortArray(arr);
+                                int count = 0;
+                        
+                                for(int i = 1; i &lt; arr.length; i++){
+                                    while(i &lt; arr.length && arr[i-1] == arr[i]){
+                                        i++;
+                                    }
+                                    count++;
+                                    if(count == 1 && i&lt;arr.length){
+                                        System.out.println("Second Largest Value of Array : " + arr[i]);
+                                        return;
+                                    }
+                                }
+                                System.out.println("Second Largest Value of Array does not exist");
+                            }		
+                            public static void main(String[] args){
+                                int arr[] = {9, 3, 91, 25, 87};
+                                printArray(arr);
+                                secondLargestArrayValue(arr);
+                            }
+                        }
+                    </prE>
+                    <h2 class="heading">Ouput</h2>
+                    <pre>
+Value at 1 position : 9
+Value at 2 position : 3
+Value at 3 position : 91
+Value at 4 position : 25
+Value at 5 position : 87
+Second Largest Value of Array : 87
+                    </pre>
+                    <h2 class="heading">18. Program to Find Largest Number in an array</h2>
+                    <pre>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static int arrayMax(int arr[]){
+                                int max = 0;
+                                for(int i = 1; i &lt; arr.length; i++){
+                                    if(arr[max] &lt; arr[i])
+                                        max = i;
+                                }
+                                return arr[max];
+                            }
+                        
+                            public static void main(String[] args){
+                                int arr[] = {83, 49, 289, 27, 23, 592};
+                                printArray(arr);
+                                System.out.println("\nMaximum value of array :" + arrayMax(arr));
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Value at 1 position : 83
+Value at 2 position : 49
+Value at 3 position : 289
+Value at 4 position : 27
+Value at 5 position : 23
+Value at 6 position : 592
+
+Maximum value of array :592
+                    </pre>
+                    <h2 class="heading">19. to Program Find 2nd Smallest Number in an array</h2>
+                    <pre>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static void sortArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    for(int j = 0; j &lt; (arr.length-i-1); j++){
+                                        if(arr[j] > arr[j+1]){
+                                            int temp = arr[j];
+                                            arr[j] = arr[j+1];
+                                            arr[j+1] = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        
+                            static void secondSmallestArrayValue(int arr[]){
+                                sortArray(arr);
+                                int count = 0;
+                        
+                                for(int i = 1; i &lt; arr.length; i++){
+                                    while(i &Lt; arr.length && arr[i-1] == arr[i]){
+                                        i++;
+                                    }
+                                    count++;
+                                    if(count == 1 && i &lt; arr.length){
+                                        System.out.println("Second Smallest Value of Array : " + arr[i]);
+                                        return;
+                                    }
+                                }
+                                System.out.println("Second Smallest Value of Array does not exist");
+                            }		
+                            public static void main(String[] args){
+                                int arr[] = {9, 3, 91, 25, 87};
+                                printArray(arr);
+                                secondSmallestArrayValue(arr);
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+Value at 1 position : 9
+Value at 2 position : 3
+Value at 3 position : 91
+Value at 4 position : 25
+Value at 5 position : 87
+Second Smallest Value of Array : 9
+                    </prE>
+                    <h2 class="heading">20. Program to Find Smallest Number in an array</h2>
+                    <pre>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static int arrayMin(int arr[]){
+                                int min = 0;
+                                for(int i = 1; i &lt; arr.length; i++){
+                                    if(arr[min] > arr[i])
+                                        min = i;
+                                }
+                                return arr[min];
+                            }
+                        
+                            public static void main(String[] args){
+                                int arr[] = {83, 49, 289, 27, 23};
+                                printArray(arr);
+                                System.out.println("\nMinimum value of array :" + arrayMin(arr));
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+Value at 1 position : 83
+Value at 2 position : 49
+Value at 3 position : 289
+Value at 4 position : 27
+Value at 5 position : 23
+
+Minimum value of array :23
+                    </prE>
+                    <h2 class="heading">21. Program to Remove Duplicate Element in an array</h2>
+                    <pre>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                        
+                            static int[] removeDuplicateElements(int arr[]){
+                                int newarr[] = null;
+                                java.util.ArrayList uniquearr = new java.util.ArrayList<>();
+                        
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    if(!uniquearr.contains(arr[i])){
+                                        uniquearr.add(arr[i]);
+                                    }
+                                }
+                                newarr = new int[uniquearr.size()];
+                                for(int i = 0; i &lt; uniquearr.size(); i++){
+                                    newarr[i] = uniquearr.get(i);
+                                }
+                                return newarr;
+                            }
+                            
+                            public static void main(String args[]){
+                                int arr[] = {6,2,9,3,6,2,3,6};
+                                printArray(arr);
+                                arr = removeDuplicateElements(arr);
+                                System.out.println("New Array : ");
+                                printArray(arr);
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+Value at 1 position : 6
+Value at 2 position : 2
+Value at 3 position : 9
+Value at 4 position : 3
+Value at 5 position : 6
+Value at 6 position : 2
+Value at 7 position : 3
+Value at 8 position : 6
+New Array :
+Value at 1 position : 6
+Value at 2 position : 2
+Value at 3 position : 9
+Value at 4 position : 3
+                    </prE>
+                    <h2 class="heading">22. Program to Print Odd and Even Numbers from an array</h2>
+                    <pre>
+                        class Main{
+                            static void printOddFromArray(int arr[]){
+                                System.out.println("Odd Values of array : ");
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    if(arr[i] % 2 != 0)
+                                        System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static void printEvenFromArray(int arr[]){
+                                System.out.println("Even Values of array : ");
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    if(arr[i] % 2 == 0)
+                                        System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &Lt;arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                        
+                            public static void main(String[] args){
+                                int arr[] = {83, 42, 28, 27, 23};
+                                printArray(arr);
+                                printOddFromArray(arr);
+                                printEvenFromArray(arr);
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Value at 1 position : 83
+Value at 2 position : 42
+Value at 3 position : 28
+Value at 4 position : 27
+Value at 5 position : 23
+Odd Values of array :
+Value at 1 position : 83
+Value at 4 position : 27
+Value at 5 position : 23
+Even Values of array :
+Value at 2 position : 42
+Value at 3 position : 28
+                    </pre>
+                    <h2 class="heading">23. How to Sort an Array in Java</h2>
+                    <pre>
+                        class Main{
+                            static void printArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                                }
+                            }
+                            static void sortArray(int arr[]){
+                                for(int i = 0; i &lt; arr.length; i++){
+                                    for(int j = 0; j &lt; (arr.length-i-1); j++){
+                                        if(arr[j] > arr[j+1]){
+                                            int temp = arr[j];
+                                            arr[j] = arr[j+1];
+                                            arr[j+1] = temp;
+                                        }
+                                    }
+                                }
+                            }		
+                            public static void main(String[] args){
+                                int arr[] = {83, 49, 289, 27, 23};
+                                printArray(arr);
+                                sortArray(arr);
+                                System.out.println("\nAfter Sorting in Ascending order : ");
+                                printArray(arr);
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Value at 1 position : 83
+Value at 2 position : 49
+Value at 3 position : 289
+Value at 4 position : 27
+Value at 5 position : 23
+
+After Sorting in Ascending order :
+Value at 1 position : 23
+Value at 2 position : 27
+Value at 3 position : 49
+Value at 4 position : 83
+Value at 5 position : 289
                     </pre>
