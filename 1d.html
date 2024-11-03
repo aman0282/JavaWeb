@@ -57,3 +57,446 @@ System.out.println("Copy Array");
 }
 }
                     </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Orignal Array
+1
+2
+3
+4
+Copy Array
+1
+2
+3
+4
+                    </pre>
+                    <h2 class="heading">2. Program to find the frequency of each element in the array</h2>
+                    <pre>
+                        class Fre {
+                            public static void main(String[] args) {
+                                int[] array = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+                                int[] frequency = new int[array.length];
+                        
+                                for (int i = 0; i < array.length; i++) {
+                                    int count = 0;
+                                    for (int j = 0; j < array.length; j++) {
+                                        if (array[i] == array[j]) {
+                                            count++;
+                                        }
+                                    }
+                                    frequency[i] = count;
+                                }
+                        
+                                for (int i = 0; i < array.length; i++) {
+                                    boolean isDuplicate = false;
+                                    for (int j = 0; j < i; j++) {
+                                        if (array[i] == array[j]) {
+                                            isDuplicate = true;
+                                            break;
+                                        }
+                                    }
+                                    if (!isDuplicate) {
+                                        System.out.println("Number " + array[i] + " appears " + frequency[i] + " times");
+                                    }
+                                }
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Number 1 appears 1 times
+Number 2 appears 2 times
+Number 3 appears 3 times
+Number 4 appears 4 times
+
+                    </pre>
+                    <h2 class="heading">3. Program to left rotate the elements of an array</h2>
+                    <pre>
+                        class Left{
+                            public static void main(String[] args) {
+                                int[] array = {1, 2, 3, 4, 5};
+                                int rotations = 2;
+                        
+                                System.out.println("Original array:");
+                                for (int num : array) {
+                                    System.out.print(num + " ");
+                                }
+                                System.out.println();
+                        
+                                // Left rotate
+                                for (int i = 0; i < rotations; i++) {
+                                    int temp = array[0];
+                                    for (int j = 0; j < array.length - 1; j++) {
+                                        array[j] = array[j + 1];
+                                    }
+                                    array[array.length - 1] = temp;
+                                }
+                        
+                                System.out.println("Rotated array:");
+                                for (int num : array) {
+                                    System.out.print(num + " ");
+                                }
+                                System.out.println();
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Original array:
+1 2 3 4 5
+Rotated array:
+3 4 5 1 2
+
+                    </pre>
+                    <h2 class="heading">4. Program to print the duplicate elements of an array</h2>
+                    <pre>
+                        class Duplicate {
+                            public static void main(String[] args) {
+                                int[] array = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+                        
+                                System.out.println("Duplicate elements:");
+                                for (int i = 0; i < array.length; i++) {
+                                    int count = 0;
+                                    for (int j = 0; j < array.length; j++) {
+                                        if (array[i] == array[j]) {
+                                            count++;
+                                        }
+                                    }
+                                    if (count > 1 && array[i] != -1) {
+                                        System.out.println(array[i]);
+                                        array[i] = -1;
+                                    }
+                                }
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Duplicate elements:
+2
+3
+3
+4
+4
+4
+
+                    </pre>
+                    <h2 class="heading">5. Program to print the elements of an array</h2>
+                    <pre>
+    class Print
+	{
+	public static void main(String st[])
+	{
+	int arr[]={1,2,3,4},i;
+	for(i=0;i<arr.length;i++)
+	{
+	System.out.println(arr[i]);
+	}
+	}
+	}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+1
+2
+3
+4
+                    </pre>
+                    <h2 class="heading">6. Program to print the elements of an array in reverse order </h2>
+                    <pre>
+        class Reverse
+        {
+        public static void main(String st[])
+        {
+        int arr[]={1,2,3,4},i;
+        for(i=arr.length-1;i>=0;i--)
+        {
+        System.out.println(arr[i]);
+        }
+        }
+        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+4
+3
+2
+1
+
+                    </pre>
+                    <h2 class="heading">7. Program to print the elements of an array present on even position</h2>
+                    <pre>
+        class Even
+		{
+		public static void main(String st[])
+		{
+		int arr[]={1,2,3,4},i;
+		for(i=0;i<arr.length;i++)
+		{
+		if(i%2==0)
+		{
+		System.out.println(arr[i]);
+		}
+		}
+		}
+		}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+                        1
+                        3
+                        
+                    </prE>
+                    <h2 class="heading">8. Program to print the elements of an array present on odd position</h2>
+                    <pre>
+                class PrintOddPosition
+                {
+                public static void main(String st[])
+                {
+                int arr[]={1,2,3,4},i;
+                for(i=0;i<arr.length;i++)
+                {
+                if(i%2!=0)
+                {
+                System.out.println(arr[i]);
+                }
+                }
+                }
+                }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+2
+4
+                    </pre>
+                    <h2 class="heading">9. Program to print the largest element in an array</h2>
+                    <pre>
+                        class Largest
+                        {
+                        public static void main(String st[])
+                        {
+                        int arr[]={1,20,30,4,5},i,temp,max=0;
+                        temp=arr[0];
+                        for(i=0;i<arr.length;i++)
+                        {
+                        if(arr[i]>temp)
+                        {
+                        temp=arr[i];
+                        max=temp;
+                        }
+                        else
+                        {
+                        max=temp;
+                        }
+                        }
+                        System.out.println("Largest element is :- "+max);
+                        
+                        }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        Largest element is :- 30
+                    </pre>
+                    <h2 class="heading">10. Program to print the smallest element in an array</h2>
+                    <pre>
+        class Smallest
+        {
+        public static void main(String st[])
+        {
+        int arr[]={1,20,30,4,5},i,temp,min=0;
+        temp=arr[0];
+        for(i=0;i<arr.length;i++)
+        {
+        if(arr[i]<temp)
+        {
+        temp=arr[i];
+        min=temp;
+        }
+        else
+        {
+        min=temp;
+        }
+        }
+        System.out.println("Smallest element is :- "+min);
+
+        }
+        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+                        Smallest element is :- 1
+                    </prE>
+                    <h2 class="heading">11. Program to print the number of elements present in an array</h2>
+                    <pre>
+                        class Count {
+                            public static void main(String[] args) {
+                        
+                                int[] numbers = {10, 20, 30, 40, 50};
+                        
+                                // Calculate the number of elements in the array
+                                int numberOfElements = numbers.length;
+                        
+                                System.out.println("The number of elements in the array is: " + numberOfElements);
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        The number of elements in the array is: 5
+                    </pre>
+                    <h2 class="heading">12. Program to print the sum of all the items of the array</h2>
+                    <pre>
+    class SumOfElements
+	{
+	public static void main(String st[])
+	{
+	int arr[]={1,2,3,4},sum=0,i;
+	for(i=0;i<arr.length;i++)
+	{
+	sum+=arr[i];
+	}
+	System.out.println("Sum Of Element :- "+sum);
+	}
+	}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        Sum Of Element :- 10
+                    </pre>
+                    <h2 class="heading">13. Program to right rotate the elements of an array</h2>
+                    <PRE>
+                        class A {
+                            // Method to right rotate the array
+                            public static void rightRotate(int[] arr, int d) {
+                                int n = arr.length;
+                                // Handle cases where d >= n
+                                d = d % n; 
+                                if (d == 0) return; // No rotation needed if d is 0
+                        
+                                // Create a temporary array to hold the rotated elements
+                                int[] temp = new int[d];
+                        
+                                // Store the last d elements in the temporary array
+                                for (int i = 0; i < d; i++) {
+                                    temp[i] = arr[n - d + i];
+                                }
+                        
+                                // Shift the remaining elements in the original array
+                                for (int i = n - 1; i >= d; i--) {
+                                    arr[i] = arr[i - d];
+                                }
+                        
+                                // Copy the temporary array back to the original array
+                                for (int i = 0; i < d; i++) {
+                                    arr[i] = temp[i];
+                                }
+                            }
+                        
+                            public static void main(String[] args) {
+                                // Define an array
+                                int[] arr = {1, 2, 3, 4, 5};
+                        
+                                // Number of positions to rotate
+                                int d = 2;
+                        
+                                // Print original array
+                                System.out.println("Original Array:");
+                                printArray(arr);
+                        
+                                // Right rotate the array
+                                rightRotate(arr, d);
+                        
+                                // Print rotated array
+                                System.out.println("Array after right rotation by " + d + " positions:");
+                                printArray(arr);
+                            }
+                        
+                            // Method to print the array
+                            public static void printArray(int[] arr) {
+                                for (int num : arr) {
+                                    System.out.print(num + " ");
+                                }
+                                System.out.println(); // New line for better output formatting
+                            }
+                        }
+                    </PRE>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+Original Array:
+1 2 3 4 5
+Array after right rotation by 2 positions:
+4 5 1 2 3
+                    </pre>
+                    <h2 class="heading">14. Program to sort the elements of an array in ascending order</h2>
+                    <pre>
+    class Sort
+	{
+	public static void main(String st[])
+	{
+	int arr[]={4,3,5,1,6},i,j,temp;
+	for(i=0;i<arr.length;i++)
+	{
+	for(j=i+1;j<arr.length;j++)
+	{
+	if(arr[j]>arr[i])
+	{
+	temp=arr[i];
+	arr[i]=arr[j];
+	arr[j]=temp;
+	}
+	}
+	}
+	for(i=0;i<arr.length;i++)
+	{
+	System.out.println(arr[i]);
+	}
+	}
+	}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+6
+5
+4
+3
+1
+                    </prE>
+                    <h2 class="heading">15. Program to sort the elements of an array in descending order</h2>
+                    <pre>
+    class Sort
+	{
+	public static void main(String st[])
+	{
+	int arr[]={4,3,5,1,6},i,j,temp;
+	for(i=0;i<arr.length;i++)
+	{
+	for(j=i+1;j<arr.length;j++)
+	{
+	if(arr[j]<arr[i])
+	{
+	temp=arr[i];
+	arr[i]=arr[j];
+	arr[j]=temp;
+	}
+	}
+	}
+	for(i=0;i<arr.length;i++)
+	{
+	System.out.println(arr[i]);
+	}
+	}
+	}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+1
+3
+4
+5
+6
+                    </pre>
+                    <h2 class="heading">16. Program to Find 3rd Largest Number in an array</h2>
+                    <pre>
+                        
+                    </pre>
