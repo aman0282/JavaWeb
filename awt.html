@@ -1,0 +1,627 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Java Database Connectivity</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="nav-bar"></div> 
+
+
+        <div class="d-flex h-100">
+           <div id="leftcontainer" class="h-100">
+                <ul>
+					<li><a href="#" >Java Programs</a></li>
+                    <li><a href="2darray.html" >2d-Array</a></li>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="jdbc.html">Java Database Connectivity</a></li>    
+					<li><a href="threads.html">Multi-Threading</a></li> 
+					<li><a href="exception.html">Exception Handling</a></li>
+					<li><a href="applet.html">Applets</a></li> 
+					<li><a href="1d.html">1d-Arrays</a></li>   
+                    <li><a href="awt.html">Graphical User Interface(awt)</a></li> 
+
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="Arrays">
+                    <h2 class="heading t-head">Graphical User Interface(AWT)</h2>
+                    <H2 class="HEADING">1. Create a simple AWT application that displays a button with FlowLayout manager.</H2>
+                    <prE>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Button b1 = new Button("Click me");
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.CENTER));
+        add(b1);
+        setVisible(true);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </prE>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+
+                    </prE>
+                    <h2 class="heading">2. Create a simple AWT application that displays a button with Custom Layout.</h2>
+                    <PRE>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Button b1 = new Button("Click me");
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        b1.setBounds(100,100,50,30);
+        add(b1);
+        
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </PRE>
+                    <H2 class="HEADING">Output</H2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">3. Create a simple AWT application that displays multiple buttons with BorderLayout manager (North, East, West, South, Center).</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Button b1 = new Button("EAST");
+    Button b2 = new Button("NORTH");
+    Button b3 = new Button("WEST");
+    Button b4 = new Button("SOUTH");
+    Button b5 = new Button("CENTER");
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new BorderLayout(10,10));
+        
+        //b1.setBounds(100,100,50,30);
+        add(b1,BorderLayout.EAST);
+        add(b2,BorderLayout.NORTH);
+        add(b3,BorderLayout.WEST);
+        add(b4,BorderLayout.SOUTH);
+        add(b5,BorderLayout.CENTER);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">4. Create a simple AWT application that displays a TextField with FlowLayout manager.</h2>
+                    <prE>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    TextField tf = new TextField();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.CENTER));
+        tf.setBounds(100, 100, 500, 50);;
+        add(tf);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </prE>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">5. Create a simple AWT application that displays a TextField with Custom Layout.</h2>
+                    <PRE>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    TextField tf = new TextField();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        tf.setBounds(100,100,500,100);
+        add(tf);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </PRE>
+                    <H2 class="HEADING">Output</H2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">6. Create a simple AWT application that displays a Checkbox with FlowLayout manager.</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Checkbox cb = new Checkbox();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT));
+        add(cb);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">7. Create a simple AWT application that displays a Checkbox with Custom Layout.</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Checkbox cb = new Checkbox();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        cb.setBounds(100, 100, 50, 50);
+        add(cb);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+
+                    </prE>
+                    <h2 class="heading">8. Create a simple AWT application that displays a Label with FlowLayout manager.</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Label l1 = new Label("This is Label");
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT));
+        add(l1);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">9. Create a simple AWT application that displays a Label with Custom Layout.</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Label l1 = new Label("This is Label");
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        l1.setBounds(100,100,100,50);
+        add(l1);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">10. Create a simple AWT application that displays a Choice with FlowLayout manager.</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Choice ch = new Choice();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT));
+        ch.setBounds(100,100,100,50);
+        ch.addItem("Apple");
+        ch.addItem("Mango");
+        ch.addItem("Orange");
+        ch.addItem("Grapes");
+        ch.addItem("Pear");
+        ch.addItem("Coconut");
+        add(ch);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">11. Create a simple AWT application that displays a Choice with Custom Layout.</h2>
+                    <pre>
+package awt10;
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    Choice ch = new Choice();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        ch.setBounds(100,100,100,50);
+        ch.addItem("Apple");
+        ch.addItem("Mango");
+        ch.addItem("Orange");
+        ch.addItem("Grapes");
+        ch.addItem("Pear");
+        ch.addItem("Coconut");
+        add(ch);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">12. Create a simple AWT application that displays a CheckboxGroup with FlowLayout manager.</h2>
+                    <pre>
+                        import java.awt.*;
+                        import java.awt.event.*;
+                        class MyFrame extends Frame
+                        {
+                            Checkbox cb1 = new Checkbox();
+                            Checkbox cb2 = new Checkbox();
+                            CheckboxGroup cbg = new CheckboxGroup();
+                            MyFrame()
+                            {
+                                setBounds(100,100,400,400);
+                                setLayout(new FlowLayout(FlowLayout.LEFT));
+                                cb1.setLabel("Male");
+                                cb2.setLabel("Female");
+                                cb1.setCheckboxGroup(cbg);
+                                cb2.setCheckboxGroup(cbg);
+                                add(cb1);
+                                add(cb2);
+                                addWindowListener(new WindowAdapter() {
+                                    public void windowClosing(WindowEvent e)
+                                    {
+                                        System.exit(1);
+                                    }
+                                });
+                                setVisible(true);
+                            }
+                        } 
+                         class Main {
+                            public static void main(String[] args) {
+                                new MyFrame();
+                            }
+                        }   
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">13. Create a simple AWT application that displays a CheckboxGroup with Custom Layout.</h2>
+                    <pre>
+                        import java.awt.*;
+                        import java.awt.event.*;
+                        class MyFrame extends Frame
+                        {
+                            Checkbox cb1 = new Checkbox();
+                            Checkbox cb2 = new Checkbox();
+                            CheckboxGroup cbg = new CheckboxGroup();
+                            MyFrame()
+                            {
+                                setBounds(100,100,400,400);
+                                setLayout(null);
+                                cb1.setBounds(100,100,50,20);
+                                cb2.setBounds(150,100,50,20);
+                                cb1.setLabel("Male");
+                                cb2.setLabel("Female");
+                                cb1.setCheckboxGroup(cbg);
+                                cb2.setCheckboxGroup(cbg);
+                                add(cb1);
+                                add(cb2);
+                                addWindowListener(new WindowAdapter() {
+                                    public void windowClosing(WindowEvent e)
+                                    {
+                                        System.exit(1);
+                                    }
+                                });
+                                setVisible(true);
+                            }
+                        } 
+                         class Main {
+                            public static void main(String[] args) {
+                                new MyFrame();
+                            }
+                        }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">14. Create a simple AWT application that displays a List with FlowLayout manager.</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    List li = new List();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT));
+        
+        li.add("Apple");
+        li.add("Mango");
+        li.add("Orange");
+        li.add("Grapes");
+        li.add("Pear");
+        li.add("Coconut");
+        add(li);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+<h2 class="heading">15. Create a simple AWT application that displays a List with Custom Layout.</h2>
+<PRE>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    List li = new List();
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        li.setBounds(100,100,100,50);
+        li.add("Apple");
+        li.add("Mango");
+        li.add("Orange");
+        li.add("Grapes");
+        li.add("Pear");
+        li.add("Coconut");
+        add(li);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+</PRE>
+<H2 class="HEADING">Output</H2>
+<pre>
+
+</pre>
+<h2 class="heading">16. Create a simple AWT application that displays a TextArea with FlowLayout manager.</h2>
+<prE>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    TextArea ta = new TextArea(5, 20);
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT));
+        
+        add(ta);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+</prE>
+<h2 class="heading">Output</h2>
+<pre>
+
+</pre>
+<h2 class="heading">17. Create a simple AWT application that displays a TextArea with Custom Layout.</h2>
+<pre>
+import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    TextArea ta = new TextArea(5, 20);
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        ta.setBounds(100,100,100,50);
+        add(ta);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+
+</pre>
