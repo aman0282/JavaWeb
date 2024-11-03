@@ -27,3 +27,258 @@
             <div id="rightcontainer" class="w-100">
                 <div class="programs w-100" id="searching">
                     <h2 class="heading t-head">Applets</h2>
+                    <h2 class="heading">1. Create an applet showing the string "Hello World" which is embedded in the HTML page.</h2>
+                    <pre>
+                        import java.applet.*;
+                        import java.awt.*;
+                        public class HelloWorld extends Applet{
+                            public void paint(Graphics g)
+                            {
+                                g.drawString("Hello World!", 100, 100);
+                            }
+                        }
+                        /*
+                         &lt;applet code = "HelloWorld.class" width = "300" height= "500">&lt;/applet&gt;
+                        */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 131356.png">
+                    </pre>
+                    <h2 class="heading">2. Create an applet showing the string "Hello World" which is executed by an appletviewer.</h2>
+                    <pre>
+import java.applet.*;
+import java.awt.*;
+public class applet2 extends Applet{
+    public void paint(Graphics g)
+    {
+        g.drawString("Hello World!", 100, 100);
+    }
+}
+/*
+ &lt;applet code = "HelloWorld.class" width = "300" height= "500">&lt;/applet&gt;
+ */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 131928.png">
+                    </pre>
+                    <h2 class="heading">3. Create an applet in Java to draw a circle.</h2>
+                    <pre>
+import java.applet.*;
+import java.awt.*;
+public class applet3 extends Applet{
+    public void paint(Graphics g)
+    {
+        g.drawOval(100, 100, 100, 100);
+    }
+}
+/*
+ &lt;applet code = "applet3.class" width = "300" height= "500">&lt;/applet&gt;
+ */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 131953.png">
+                    </pre>
+                    <h2 class="heading">4. Create an applet in Java to draw a polygon.
+                    </h2>
+                    <pre>
+                        import java.applet.Applet;
+import java.awt.*;
+public class applet4 extends Applet {
+    public void paint(Graphics g)
+    {
+        int x[]={100,200,300,400};
+        int y[]={200,200,300,400};
+        g.drawPolygon(x, y,4);
+    }
+}
+/*
+ <applet code = "applet4.class" width = "300" height= "500"></applet>
+ */
+                    </pre>
+                    <h2  class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132018.png">
+                    </pre>
+                    <h2 class="heading">5. Create an applet in Java to draw a rectangle.</h2>
+                    <PRE>
+import java.applet.*;
+import java.awt.*;
+public class applet5 extends Applet{
+    public void paint(Graphics g)
+    {
+        g.drawRect(100, 100, 150, 100);
+    }
+}
+/*
+ <applet code = "applet5.class" width = "300" height= "500"></applet>
+ */
+                    </PRE>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132048.png">
+                    </pre>
+                    <h2 class="heading">6. Create an applet in Java to draw a square.</h2>
+                    <pre>
+import java.applet.*;
+import java.awt.*;
+public class applet6 extends Applet{
+    
+    public void paint(Graphics g)
+    {
+        g.drawRect(100, 100, 100, 100);
+    }
+}
+/*
+ <applet code = "applet6.class" width = "300" height= "500"></applet>
+ */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132113.png">
+                    </pre>
+                    <h2 class="heading">7. Create an applet in Java to draw a 4 concentric circles.</h2>
+                    <pre>
+import java.applet.*;
+import java.awt.*;
+public class applet7 extends Applet{
+    public void paint(Graphics g)
+    {
+        g.drawOval(100, 100, 100, 100);
+        g.drawOval(250, 100, 100, 100);
+        g.drawOval(400, 100, 100, 100);
+        g.drawOval(550, 100, 100, 100);
+    }
+}
+/*
+ <applet code = "applet7.class" width = "300" height= "500"></applet>
+ */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132147.png">
+                    </prE>
+                    <h2 class="heading">8. Create an applet in Java to draw a line.</h2>
+                    <pre>
+                        import java.applet.*;
+                        import java.awt.*;
+                        public class applet8 extends Applet{
+                            public void paint(Graphics g)
+                            {
+                                g.drawLine(100, 100, 100, 200);
+                            }
+                        }
+                        /*
+                         <applet code = "applet8.class" width = "300" height= "500"></applet>
+                         */                       
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132211.png">
+                    </pre>
+                    <h2 class="heading">9. Create an applet in Java to draw a oval.</h2>
+                    <pre>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class applet9 extends Applet {
+    public void paint(Graphics g)
+    {
+        g.drawOval(100, 100, 100, 50);
+    }
+}
+/*
+ <applet code = "applet9.class" width = "300" height= "500"></applet>
+ */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132242.png">
+                    </pre>
+                    <h2 class="heading">10. Create an applet in Java to draw a arc.</h2>
+                    <pre>
+import java.applet.*;
+import java.awt.*;
+public class applet10 extends Applet{
+    public void paint(Graphics g)
+    {
+        g.drawArc(100, 100, 100, 100, 30, 180);
+    }
+}
+
+/*
+ <applet code = "applet10.class" width = "300" height= "500"></applet>
+ */
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132304.png">
+                    </pre>
+                    <h2 class="heading">11. Create an applet in Java to change the background color.</h2>
+                    <pre>
+                        import java.applet.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+public class applet11 extends Applet{
+    public void init()
+    {
+        setBackground(Color.red);
+        Button r = new Button("red");
+        Button g = new Button("green");
+        Button b = new Button("blue");
+        add(b);
+        add(g);
+        add(r);
+        r.addMouseListener(new MouseAdapter()
+        {
+            public void mouseClicked(MouseEvent e)
+            {
+                setBackground(Color.red);
+            }
+        });
+        g.addMouseListener(new MouseAdapter()
+        {
+            public void mouseClicked(MouseEvent e)
+            {
+                setBackground(Color.green);
+            }
+        });
+        b.addMouseListener(new MouseAdapter()
+        {
+            public void mouseClicked(MouseEvent e)
+            {
+                setBackground(Color.blue);
+            }
+        });
+    }
+}
+/*
+ <applet code = "applet11.class" width = "300" height= "300"></applet>
+ */
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+    <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 134049.png">
+</pre>
+<h2 class="heading">12. Create an applet in Java to draw rounded rectangle.</h2>
+<pre>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class applet12 extends Applet {
+
+    public void paint(Graphics g) {
+        g.drawRoundRect(50, 50, 200, 100, 30, 30);  
+}
+}
+/*
+ <applet code = "applet12.class" width = "300" height= "300"></applet>
+ */
+</pre>
+<h2 class="heading">Output</h2>
+<pre>
+    <img src="C:\Users\saini\OneDrive\Desktop\amanweb\amanweb\Screenshot 2024-11-03 132406.png"> 
+</pre>
