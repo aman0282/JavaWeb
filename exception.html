@@ -23,6 +23,7 @@
                     <li><a href="threads.html">Multi-Threading</a></li>
                     <li><a href="exception.html">Exception Handling</a></li>
                     <li><a href="applet.html">Applets</a></li>  
+                    <li><a href="1d.html">1d-Arrays</a></li>  
                 </ul>
             </div>
             <div id="rightcontainer" class="w-100">
@@ -31,3 +32,146 @@
             <div id="rightcontainer" class="w-100">
                 <div class="programs w-100" id="searching">
                     <h2 class="heading t-head">Exception Handling</h2>
+                    <h2 class="heading">1. Write a Java program that throws an exception and catch it using a try-catch block.</h2>
+                    <pre>
+class A
+{
+	public static void main(String args[])
+	{
+		try
+		{	
+			int divideByZero = 5/0;
+		}
+		catch( java.lang.ArithmeticException e)
+		{
+			System.out.println("Exception Caughted:"+e.getMessage());
+		}
+	}
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        Exception Caughted:/ by zero
+                    </pre>
+                    <H2 class="HEADING">2. Write a Java program to create a method that takes an integer as a parameter and throws an exception if the number is odd.</H2>
+                    <PRE>
+class Odd
+{
+    	public static void checkEvenNumber(int number) throws OddNumberException 
+	{
+       		 if (number % 2 != 0) 
+		{
+           	 	throw new OddNumberException("The number " + number + " is odd.");
+        	}
+        	System.out.println("The number " + number + " is even.");
+    	}
+
+    public static class OddNumberException extends Exception {
+        public OddNumberException(String message) {
+            super(message);
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkEvenNumber(10); // This will print "The number 10 is even."
+            checkEvenNumber(11); // This will throw an OddNumberException
+        } catch (OddNumberException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+    }
+}
+                    </PRE>
+                    <H2 class="heading">Output</H2>
+                    <pre>
+The number 10 is even.
+Caught exception: The number 11 is odd.
+
+                    </pre>
+                    <h2 class="hedaing">3. Write a Java program to create a method that reads a file and throws an exception if the file is not found</h2>
+                    <pre>
+                       
+                        class Exception3 
+                            {
+                                void readFile(String file) throws java.io.FileNotFoundException
+                                    {
+                                        java.io.File fileName = new java.io.File(file);
+                                        if(!fileName.exists())
+                                        {
+                                            throw new java.io.FileNotFoundException();
+                                        }
+                                    }
+                                public static void  main(String st[])
+                                {
+                                    Exception3 file=new Exception3();
+                                    try
+                                    {
+                                        file.readFile("text.txt");
+                                    }
+                                    catch(java.io.FileNotFoundException e)
+                                    {
+                                        System.out.println("File Not Found!");
+                                    }
+                                }
+                            } 
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+                        File Not Found!
+                    </pre>
+                    <h2 class="heading"> 4.Write a Java program that reads a list of numbers from a file and throws an exception if any of the numbers are positive</h2>
+                    <pre>
+                        package exception4;
+                        class NumberIsPositive extends Throwable
+                                {
+                                    public String getMessage()
+                                    {
+                                        return "File contain positive number";
+                                    }
+                                }
+                        class Exception4
+                                {
+                                    public static void main(String st[])
+                                    {
+                                        try
+                                        {
+                                        java.io.File file = new java.io.File("text.txt");
+                                        java.util.Scanner input = new java.util.Scanner(file);
+                                        int num;
+                                        while(input.hasNextLine())
+                                        {
+                                            while(input.hasNextInt())
+                                            {
+                                                num=input.nextInt();
+                                                if(num > 0)
+                                                {
+                                                    System.out.println(num);
+                                                    throw new NumberIsPositive();
+                                                }
+                                            
+                                            }
+                                        if(!input.hasNextInt())
+                                            {
+                                                System.out.println(input.next()+" is not integer");
+                                            }
+                                        }
+                                        }
+                                         catch(java.io.FileNotFoundException e)
+                                        {
+                                            System.out.println(e.getMessage());
+                                        }
+                                        catch (java.util.InputMismatchException e)
+                                        {
+                                            System.out.println("File not contain Integer!");
+                                        }
+                                        catch (NumberIsPositive e)
+                                        {
+                                            System.out.println(e.getMessage());
+                                        }
+                                    }   
+                                }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
