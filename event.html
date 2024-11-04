@@ -1,0 +1,858 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Complete karo -->
+        <div class="d-flex h-100">
+            <div id="leftcontainer" class="h-100">
+                <ul>
+                    <li><a href="#" >Java Programs</a></li>
+                    <li><a href="basic program.html" >Basic Programs</a></li>
+                    <li><a href="inheritence.html">Inheritence</a></li>
+                    <li><a href="packages.html">packages</a></li>
+                    <li><a href="input-output.html">Input-Output</a></li>
+                    <li><a href="OOPS.html">Object-Oriented Programming</a></li>
+                    <li><a href="dataconversion.html">Data Conversion</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="2darray.html" >2d-Array</a></li>
+                    <li><a href="jdbc.html">Java Database Connectivity</a></li>
+                    <li><a href="threads.html">Multi-Threading</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                    <li><a href="applet.html">Applets</a></li>  
+                    <li><a href="1d.html">1d-Arrays</a></li>  
+                    <li><a href="awt.html">Graphical User Interface(awt)</a></li> 
+                    <li><a href="event.html">Deligation Event Model</a></li> 
+                </ul>
+            </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                </div>
+            <div id="rightcontainer" class="w-100">
+                <div class="programs w-100" id="searching">
+                    <h2 class="heading t-head">Deligation Event Model</h2>
+                    <h2 class="heading">1. Java Program to Display Some Text in the Frame using Labels</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+class MyLabel extends Frame{
+    Label l= new Label("Hello AWT");
+    Label l1= new Label("Name");
+    Label l2= new Label("Class");
+    Label l3= new Label("Roll No");
+    MyLabel()
+    {
+        super("Label");
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
+        add(l);
+        add(l3);
+        add(l1);
+        add(l2);
+
+        addWindowListener(new WindowAdapter() {
+           public void windowClosing(WindowEvent e)
+           {
+            System.exit(1);
+           }
+        });
+        setVisible(true);
+    }
+}
+
+ class Main {
+
+    public static void main(String[] args) {
+        new MyLabel();
+    }
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">2. Java Program to Create Text Area and Password Field</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+
+public class TextAreaPassword extends Frame {
+
+    private TextArea textArea;
+    private TextField passwordField;
+
+    public TextAreaPassword() {
+        setTitle("Text Area and Password Field");
+        setSize(400, 400);
+        setLayout(new FlowLayout(FlowLayout.LEFT));
+
+        textArea = new TextArea("Enter text here...", 5, 30);
+        add(textArea);
+
+        passwordField = new TextField(20);
+        passwordField.setEchoChar('*');  // Mask input with '*'
+        add(passwordField);
+
+        // Set up a window listener to close the application
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        // Create and show the frame
+        TextAreaPassword app = new TextAreaPassword();
+        app.setVisible(true);
+    }
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">3. Java Program to Create a Button and Display Image in the Frame when Clicked</h2>
+                    <pre>
+package image;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+
+class MyLabel extends Frame{
+    private Button btn = new Button("Show Image");
+    private Image image;
+    private boolean showImage = false;
+   
+    MyLabel()
+    {
+        super("Label");
+        setBounds(100,100,400,400);
+        setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
+        image = Toolkit.getDefaultToolkit().getImage("../../JAVAWEB/img/java.webp");
+        add(btn);
+        btn.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e)
+            {
+                showImage = true;
+                repaint(); 
+            }
+        });
+        
+        addWindowListener(new WindowAdapter() {
+           public void windowClosing(WindowEvent e)
+           {
+            System.exit(1);
+           }
+        });
+        setVisible(true);
+    }
+    public void paint(Graphics g) {
+        super.paint(g);
+        // Draw the image if showImage is true
+        if (showImage && image != null) {
+            // Scale the image to fit the frame
+            g.drawImage(image, 50, 100, getWidth() - 100, getHeight() - 150, this);
+        }
+    }
+}
+
+ class Main {
+
+    public static void main(String[] args) {
+        new MyLabel();
+    }
+
+}
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">4. Java Program to Create 2 Radio Buttons and Display Selected Button Label</h2>
+                    <pre>
+package radio;
+import java.awt.*;
+import java.awt.event.*;
+class Radio extends Frame
+    {
+        private Label l = new Label("Gender");
+        private Checkbox cb1 = new Checkbox("Male");
+        private Checkbox cb2 = new Checkbox("Female");
+        private CheckboxGroup cbg = new CheckboxGroup();
+        Radio()
+        {
+            setBounds(100,100,400,400);
+            setLayout(new FlowLayout(FlowLayout.LEFT));
+            add(l);
+            cb1.setCheckboxGroup(cbg);
+            cb2.setCheckboxGroup(cbg);
+            add(cb1);
+            add(cb2);
+            setVisible(true);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e)
+                {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+class Main
+    {
+        public static void main(String[] args) {
+            new Radio();
+        }
+    }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <prE>
+
+                    </prE>
+                    <h2 class="heading">5. Java Program to Handle KeyBoardEvent</h2>
+                    <pre>
+import java.awt.*;
+import java.awt.event.*;
+class KeyBoardEvent extends Frame
+    {
+        TextField tf = new TextField(10);
+        private Label l = new Label();
+        KeyBoardEvent()
+        {
+            setBounds(100,100,400,400);
+            setLayout(new FlowLayout(FlowLayout.LEFT));
+            add(tf);
+            add(l);
+            tf.addKeyListener(new KeyListener() {
+                public  void keyTyped(java.awt.event.KeyEvent e)
+                {
+                    l.setText("Key Typed");
+                }
+                public  void keyPressed(java.awt.event.KeyEvent e)
+                {
+                    l.setText("Key Pressed");
+                }
+                public  void keyReleased(java.awt.event.KeyEvent e)
+                {
+                    l.setText("Key Released");
+                }
+            });
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e)
+                {
+                    System.exit(0);
+                }
+            });
+            setVisible(true);
+        }
+    }
+class Main
+    {
+        public static void main(String[] args) {
+            new KeyBoardEvent();
+        }
+    }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">6. Java Program to Handle MouseEvent</h2>
+                    <PRE>
+import java.awt.*;
+import java.awt.event.*;
+class DEM6 extends Frame
+    {
+        Button btn = new Button("Click me");
+        Label l = new Label();
+        DEM6()
+        {
+            setBounds(100,100,400,400);
+            setLayout(new FlowLayout(FlowLayout.LEFT));
+            add(btn);
+            l.setSize(100, 50);
+            add(l);
+            btn.addMouseListener(new MouseListener() {
+  public  void mouseClicked(MouseEvent e)
+                {
+                    l.setText("Mouse Clicked");
+                }
+  public  void mousePressed(MouseEvent e)
+                {
+                    l.setText("MousePressed");
+                }
+  public  void mouseReleased(MouseEvent e)
+                {
+                    l.setText("Mouse Relased");
+                }
+  public  void mouseEntered(MouseEvent e)
+                {
+                    l.setText("Mouse Eneted");
+                }
+  public  void mouseExited(MouseEvent e)
+                {
+                    l.setText("Mouse Exited");
+                }
+
+            });
+            setVisible(true);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e)
+                {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+class Main
+    {
+        public static void main(String[] args) {
+            new DEM6();
+        }
+    }
+                    </PRE>
+                    <H2 class="heading">Output</H2>
+                    <pre>
+
+                    </pre>
+                    <h2 class="heading">7. Java Program to Get and Set State and Get Label of a Check Box</h2>
+                    <pre>
+package checkbox;
+import java.awt.*;
+import java.awt.event.*;
+class SetCheckbox extends Frame
+    {
+        TextField tf = new TextField(10);
+        private Checkbox cb = new Checkbox();
+        private Button btn = new Button("Set Label");
+        SetCheckbox()
+        {
+            setBounds(100,100,400,400);
+            setLayout(new FlowLayout(FlowLayout.LEFT));
+            add(tf);
+            add(btn);
+            add(cb);
+            btn.addMouseListener(new MouseAdapter() {
+                public void mouseClicked(MouseEvent e)
+                {
+                    String label = tf.getText();
+                    cb.setLabel(label);
+                }
+            });
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e)
+                {
+                    System.exit(0);
+                }
+            });
+            setVisible(true);
+        }
+    }
+class Main
+    {
+        public static void main(String[] args) {
+            new SetCheckbox();
+        }
+    }
+                    </pre>
+                    <h2 class="heading">Output</h2>
+                    <PRE>
+
+                    </PRE>
+                   <h2 class="heading">8. Java Program to Create Check Boxes and Radio Buttons</h2>
+                   <pre>
+import java.awt.*;
+import java.awt.event.*;
+class CheckboxRadio extends Frame
+    {
+        private Label l = new Label("Select Subjects");
+        private Label l2 = new Label("Confirm");
+        private Checkbox cb = new Checkbox("C");
+        private Checkbox cb1 = new Checkbox("C++");
+        private Checkbox cb2 = new Checkbox("Java");
+        private Checkbox cb3 = new Checkbox("Yes");
+        private Checkbox cb4 = new Checkbox("No");
+        private CheckboxGroup cbg = new CheckboxGroup();
+        CheckboxRadio()
+        {
+            setBounds(100,100,400,400);
+            setLayout(new FlowLayout(FlowLayout.LEFT));
+            cb3.setCheckboxGroup(cbg);
+            cb4.setCheckboxGroup(cbg);
+            add(l);
+            add(cb);
+            add(cb1);
+            add(cb2);
+            add(cb3);
+            add(cb4);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e)
+                {
+                    System.exit(0);
+                }
+            });
+            setVisible(true);
+        }
+    }
+class Main
+    {
+        public static void main(String[] args) {
+            new CheckboxRadio();
+        }
+    }
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <pre>
+
+                   </pre>
+                   <h2 class="heading">9. Java Program to Create and Switch between Frames using Buttons</h2>
+                   <pre>
+                    import java.awt.*;
+                    import java.awt.event.*;
+                    class Frame1 extends Frame
+                        {
+                            private Button btn = new Button("Change Frame");
+                            Label l = new Label("This is 1st Frame.");
+                            Frame1()
+                            {
+                                setBounds(100,100,400,400);
+                                setLayout(new FlowLayout(FlowLayout.LEFT));
+                                add(l);
+                                add(btn);
+                                btn.addMouseListener(new MouseAdapter() {
+                                    public void mouseClicked(MouseEvent e)
+                                    {
+                                        new Frame2();
+                                    }
+                                });
+                                addWindowListener(new WindowAdapter() {
+                                    public void windowClosing(WindowEvent e)
+                                    {
+                                        System.exit(0);
+                                    }
+                                });
+                                setVisible(true);
+                            }
+                        }
+                        class Frame2 extends Frame
+                        {
+                            private Button btn = new Button("Change Frame");
+                            Label l = new Label("This is 2nd Frame.");
+                            Frame2()
+                            {
+                                setBounds(100,100,400,400);
+                                setLayout(new FlowLayout(FlowLayout.LEFT));
+                                add(l);
+                                add(btn);
+                                btn.addMouseListener(new MouseAdapter() {
+                                    public void mouseClicked(MouseEvent e)
+                                    {
+                                        new Frame1();
+                                    }
+                                });
+                                addWindowListener(new WindowAdapter() {
+                                    public void windowClosing(WindowEvent e)
+                                    {
+                                        System.exit(0);
+                                    }
+                                });
+                                setVisible(true);
+                            }
+                        }
+                    class Main
+                        {
+                            public static void main(String[] args) {
+                                new Frame1();
+                            }
+                        }
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <pre>
+
+                   </pre>
+                   <h2 class="heading">10. Java Program to Create a List Box to Select Multiple Items and Display it in the Frame</h2>
+                   <pre>
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MultiSelectListBoxApp extends Frame {
+
+    private List itemList;
+    private TextArea displayArea;
+
+    public MultiSelectListBoxApp() {
+        // Set up the frame
+        setTitle("Multi-Select List Box Example");
+        setSize(400, 400);
+        setLayout(new FlowLayout());
+
+        // Initialize the List with multiple selection enabled
+        itemList = new List(5, true); // 5 visible rows, multiple selection enabled
+        itemList.add("Item 1");
+        itemList.add("Item 2");
+        itemList.add("Item 3");
+        itemList.add("Item 4");
+        itemList.add("Item 5");
+
+        // Add a button to display selected items
+        Button displayButton = new Button("Display Selected Items");
+        displayButton.addActionListener(new ActionListener() {
+            
+            public void actionPerformed(ActionEvent e) {
+                displaySelectedItems();
+            }
+        });
+
+        // TextArea to show selected items
+        displayArea = new TextArea(5, 30);
+        displayArea.setEditable(false);
+
+        // Add components to the frame
+        add(itemList);
+        add(displayButton);
+        add(displayArea);
+
+        // Set up close operation
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                System.exit(0);
+            }
+        });
+    }
+
+    private void displaySelectedItems() {
+        // Get selected items and display them in the TextArea
+        String[] selectedItems = itemList.getSelectedItems();
+        StringBuilder sb = new StringBuilder("Selected Items:
+");
+        for (String item : selectedItems) {
+            sb.append(item).append("
+");
+        }
+        displayArea.setText(sb.toString());
+    }
+
+    public static void main(String[] args) {
+        // Create and show the frame
+        MultiSelectListBoxApp app = new MultiSelectListBoxApp();
+        app.setVisible(true);
+    }
+}
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <pre>
+
+                   </pre>
+                   <h2 class="heading">11. Java Program to Display a Message in a New Frame</h2>
+                   <pre>
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MessageFrameApp extends Frame {
+
+    public MessageFrameApp() {
+        // Set up the main frame
+        setTitle("Main Frame");
+        setSize(300, 200);
+        setLayout(new FlowLayout());
+
+        // Button to open the message frame
+        Button showMessageButton = new Button("Show Message");
+        showMessageButton.addActionListener(new ActionListener() {
+            
+            public void actionPerformed(ActionEvent e) {
+                openMessageFrame();
+            }
+        });
+
+        // Add button to the main frame
+        add(showMessageButton);
+
+        // Set up close operation
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                System.exit(0);
+            }
+        });
+    }
+
+    private void openMessageFrame() {
+        // Create a new frame to display the message
+        Frame messageFrame = new Frame("Message Frame");
+        messageFrame.setSize(250, 150);
+        messageFrame.setLayout(new FlowLayout());
+
+        // Label to display the message
+        Label messageLabel = new Label("Hello, this is your message!");
+        messageFrame.add(messageLabel);
+
+        // Set up close operation for the message frame
+        messageFrame.addWindowListener(new java.awt.event.WindowAdapter() {
+            
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                messageFrame.dispose();  // Close only the message frame
+            }
+        });
+
+        // Make the message frame visible
+        messageFrame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create and show the main frame
+        MessageFrameApp app = new MessageFrameApp();
+        app.setVisible(true);
+    }
+}
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <pre>
+
+                   </pre>
+                   <h2 class="heading">12. Java Program to Close the Frame using WindowAdapter Class</h2>
+                   <pre>
+                    package close;
+                    //Get and Set State and Get Label of a Check Box
+                    import java.awt.*;
+                    import java.awt.event.*;
+                    class Close extends Frame
+                        {
+                           Label l = new Label("Close frame using Window Adaptor!");
+                            Close()
+                            {
+                                setBounds(100,100,400,400);
+                                setLayout(new FlowLayout(FlowLayout.LEFT));
+                                add(l);
+                                addWindowListener(new WindowAdapter() {
+                                    public void windowClosing(WindowEvent e)
+                                    {
+                                        System.exit(0);
+                                    }
+                                });
+                                setVisible(true);
+                            }
+                        }
+                    class Main
+                        {
+                            public static void main(String[] args) {
+                                new Close();
+                            }
+                        }
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <pre>
+
+                   </pre>
+                   <h2 class="heading">13. Java Program to Check Which Fonts are Available in a Local System</h2>
+                   <pre>
+                    import java.awt.*;
+                    import java.awt.event.WindowAdapter;
+                    import java.awt.event.WindowEvent;
+                    import java.awt.GraphicsEnvironment;
+                    
+                    public class AvailableFontsApp extends Frame {
+                    
+                        public AvailableFontsApp() {
+                            // Set up the frame
+                            setTitle("Available Fonts");
+                            setSize(400, 300);
+                            setLayout(new BorderLayout());
+                    
+                            // TextArea to display the available fonts
+                            TextArea fontDisplayArea = new TextArea();
+                            fontDisplayArea.setEditable(false);
+                    
+                            // Retrieve available font family names
+                            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+                            String[] fontNames = ge.getAvailableFontFamilyNames();
+                    
+                            // Display font names in the TextArea
+                            for (String fontName : fontNames) {
+                                fontDisplayArea.append(fontName + "
+                    ");
+                            }
+                    
+                            // Add TextArea to the frame
+                            add(fontDisplayArea, BorderLayout.CENTER);
+                    
+                            // Set up close operation
+                            addWindowListener(new WindowAdapter() {
+                                
+                                public void windowClosing(WindowEvent windowEvent) {
+                                    System.exit(0);
+                                }
+                            });
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create and show the frame
+                            AvailableFontsApp app = new AvailableFontsApp();
+                            app.setVisible(true);
+                        }
+                    }
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <prE>
+
+                   </prE>
+                   <h2 class="heading">14. Java Program to Display Text in Different Fonts</h2>
+                   <pre>
+                    import java.awt.*;
+                    import java.awt.event.WindowAdapter;
+                    import java.awt.event.WindowEvent;
+                    import java.awt.GraphicsEnvironment;
+                    
+                    public class FontDisplayApp extends Frame {
+                    
+                        private String[] fontNames;
+                    
+                        public FontDisplayApp() {
+                            // Set up the frame
+                            setTitle("Display Text in Different Fonts");
+                            setSize(500, 600);
+                            setLayout(new FlowLayout());
+                    
+                            // Retrieve available font family names
+                            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+                            fontNames = ge.getAvailableFontFamilyNames();
+                    
+                            // Set up close operation
+                            addWindowListener(new WindowAdapter() {
+                                
+                                public void windowClosing(WindowEvent windowEvent) {
+                                    System.exit(0);
+                                }
+                            });
+                        }
+                    
+                        
+                        public void paint(Graphics g) {
+                            super.paint(g);
+                    
+                            // Starting coordinates for text
+                            int y = 60;
+                            String text = "Sample Text in Different Fonts";
+                    
+                            // Display the text in each available font
+                            for (int i = 0; i &lt; fontNames.length && i &lt; 10; i++) {  // Limiting to 10 fonts for display
+                                g.setFont(new Font(fontNames[i], Font.PLAIN, 16));
+                                g.drawString(text + " - " + fontNames[i], 50, y);
+                                y += 30;  // Move down for the next line
+                            }
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create and show the frame
+                            FontDisplayApp app = new FontDisplayApp();
+                            app.setVisible(true);
+                        }
+                    }
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <prE>
+
+                   </prE>
+                   <h2 class="heading">15. Java Program to Change Frame Background Color as Cyan</h2>
+                   <pre>
+                    import java.awt.*;
+                    import java.awt.event.WindowAdapter;
+                    import java.awt.event.WindowEvent;
+                    
+                    public class CyanBackgroundFrame extends Frame {
+                    
+                        public CyanBackgroundFrame() {
+                            // Set up the frame
+                            setTitle("Cyan Background Frame");
+                            setSize(400, 300);
+                    
+                            // Set the background color to cyan
+                            setBackground(Color.CYAN);
+                    
+                            // Set up close operation
+                            addWindowListener(new WindowAdapter() {
+                                
+                                public void windowClosing(WindowEvent windowEvent) {
+                                    System.exit(0);
+                                }
+                            });
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create and show the frame
+                            CyanBackgroundFrame app = new CyanBackgroundFrame();
+                            app.setVisible(true);
+                        }
+                    }
+                   </pre>
+                   <h2 class="heading">Output</h2>
+                   <pre>
+
+                   </pre>
+                   <h2 class="heading">16. Java Program to Change the Applet Background Colour when Button Clicked</h2>
+                   <prE>
+                    import java.applet.Applet;
+                    import java.awt.*;
+                    import java.awt.event.ActionEvent;
+                    import java.awt.event.ActionListener;
+                    import java.util.Random;
+                    
+                    /* 
+                    
+                     
+                    */
+                    
+                    public class ColorChangeApplet extends Applet {
+                    
+                        private Button colorButton;
+                        private Random random;
+                    
+                        
+                        public void init() {
+                            // Initialize button and random generator
+                            colorButton = new Button("Change Background Color");
+                            random = new Random();
+                    
+                            // Set layout and add button
+                            setLayout(new FlowLayout());
+                            add(colorButton);
+                    
+                            // Add action listener to button
+                            colorButton.addActionListener(new ActionListener() {
+                                
+                                public void actionPerformed(ActionEvent e) {
+                                    changeBackgroundColor();
+                                }
+                            });
+                        }
+                    
+                        private void changeBackgroundColor() {
+                            // Generate random color
+                            Color randomColor = new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+                            
+                            // Set the applet's background color
+                            setBackground(randomColor);
+                    
+                            // Repaint to apply the color change immediately
+                            repaint();
+                        }
+                    }
+                    /* */
+                   </prE>
+                   <h2 class="heading">Output</h2>
+                   <prE>
+
+                   </prE>
